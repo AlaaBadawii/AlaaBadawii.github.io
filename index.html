@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Taskey</title>
+    <link rel="stylesheet" href="/base.css">
+    <!-- Font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/fonts.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <header>
+        <a href="/index.html" class="navbar-item logo">
+            Taskey
+        </a>
+        <ul class="not_auth">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+                <a href="#" class="navbar-item">
+                    Login
+                </a>
+            </li>
+            <li>
+                <a href="#" class="navbar-item">
+                    Sign Up
+                </a>
+            </li>
+        </ul>
+    </header>
+    <div class="container">
+        <main class="landing">
+            <section id="hero">
+                <div>
+                    <h1>Organize your work and life, finally.</h1>
+                    <p>Manage your tasks efficiently and effortlessly.</p>
+                    <a href="#" class="btn">Start for free</a>
+                </div>
+                <div class="hero_img">
+                    <img src="/static/imges/home_page.png" alt="">
+                </div>
+            </section>
+            <section id="features" class="landing-container">
+                <div>
+                    <h2>Features</h2>
+                    <div class="features-list">
+                        <div class="feature">
+                            <h3>User Authentication</h3>
+                            <p>Secure login and registration for all users.</p>
+                        </div>
+                        <div class="feature">
+                            <h3>Task Management</h3>
+                            <p>Create, read, update, and delete tasks with ease.</p>
+                        </div>
+                        <div class="feature">
+                            <h3>Categories</h3>
+                            <p>Organize your tasks into categories.</p>
+                        </div>
+                        <div class="feature">
+                            <h3>Prioritization</h3>
+                            <p>Set due dates and priorities for your tasks.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="about" class="landing-container">
+                <div>
+                    <h2>About Us</h2>
+                    <p>Taskey is a task management application that helps you organize your work and life. Our mission is to
+                        make task management simple and efficient for everyone.</p>
+                    <div class="missions">
+                        <div class="mission-item">
+                            <i class="fa-solid fa-plus"></i>
+                            Add a task
+                        </div>
+                        <div class="mission-item">
+                            <i class="fa-solid fa-calendar"></i>
+                            Set a due date
+                        </div>
+                        <div class="mission-item">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                            Give tasks priority level
+                        </div>
+                        <div class="mission-item">
+                            <i class="fa-solid fa-hashtag"></i>
+                            Organize tasks into categories
+                        </div>
+                        <div class="mission-item">
+                            <i class="fa-regular fa-circle-check"></i>
+                            Complete the Task
+                        </div>
+                    </div>
+                </div>
+                <video id="myVideo" autoplay muted playsinline>
+                    <source src="/videos/about_video.webm" type="video/webm">
+                </video>
+            </section>
+            <section id="contact">
+                <div>
+                    <h2>Contact Us</h2>
+                    <p>Have a question or feedback? We'd love to hear from you! <a
+                            href="mailto:info@taskey.com">info@taskey.com</a>.</p>
+                </div>
+            </section>
+            <footer>
+                <div>
+                    <p>&copy; 2024 Taskey. All rights reserved.</p>
+                </div>
+            </footer>
+        </main>
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                const video = document.getElementById('myVideo');
+
+                // Function to play video when in view and reset when out of view
+                const handleIntersection = (entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            video.play().catch(error => {
+                                console.log('Video play was prevented:', error);
+                            });
+                        } else {
+                            video.pause();
+                            video.currentTime = 0; // Reset the video to the beginning
+                        }
+                    });
+                };
+
+                // Create intersection observer
+                const observer = new IntersectionObserver(handleIntersection, {
+                    threshold: 0.5 // Adjust this value as needed
+                });
+
+                // Start observing the video element
+                observer.observe(video);
+            });
+        </script>
+    </div>
+</body>
+
+</html>
