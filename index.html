@@ -1,151 +1,569 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Taskey</title>
-    <link rel="stylesheet" href="/base.css">
-    <!-- Font awesome icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/static/css/fonts.css">
-    <link rel="stylesheet" href="/style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Alaa Badawii – Backend Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #0a0a0a;
+    --ink2: #1c1c1c;
+    --muted: #5a5a5a;
+    --faint: #999;
+    --bg: #f5f3ee;
+    --bg-card: #ffffff;
+    --accent: #c8f000;
+    --accent2: #ff4d1c;
+    --teal: #00b89c;
+    --border: rgba(0,0,0,0.09);
+    --border-mid: rgba(0,0,0,0.15);
+    --border-strong: rgba(0,0,0,0.22);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Mono', monospace;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* ─── LAYOUT ─── */
+  .wrap { max-width: 900px; margin: 0 auto; padding: 2.5rem 1.5rem 5rem; }
+
+  /* ─── NAV BAR ─── */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(245,243,238,0.88);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-mid);
+    padding: 0.75rem 1.5rem;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800; font-size: 18px;
+    letter-spacing: -0.03em;
+  }
+  .nav-logo span { color: var(--accent2); }
+  .nav-links { display: flex; gap: 1.5rem; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+  .nav-links a:hover { color: var(--ink); }
+
+  /* ─── HERO ─── */
+  .hero {
+    margin: 2.5rem 0 2rem;
+    padding: 2.5rem 2.5rem 2.25rem;
+    background: var(--ink2);
+    border-radius: 20px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 80% 0%, rgba(200,240,0,0.18) 0%, transparent 60%),
+                radial-gradient(ellipse at 10% 100%, rgba(0,184,156,0.12) 0%, transparent 55%);
+    pointer-events: none;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: start;
+    position: relative;
+  }
+  .hero-label {
+    font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 500; margin-bottom: 0.75rem;
+  }
+  .hero h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(36px, 6vw, 58px);
+    font-weight: 800;
+    line-height: 1.0;
+    letter-spacing: -0.03em;
+    margin-bottom: 1rem;
+  }
+  .hero h1 em {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    color: rgba(255,255,255,0.6);
+    font-weight: 400;
+  }
+  .hero-role {
+    font-size: 13px; color: rgba(255,255,255,0.5);
+    margin-bottom: 1.25rem; letter-spacing: 0.02em;
+  }
+  .hero-summary {
+    font-size: 14px; line-height: 1.8;
+    color: rgba(255,255,255,0.72);
+    max-width: 560px;
+    margin-bottom: 1.75rem;
+  }
+  .hero-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+  .hero-pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 12px; padding: 6px 14px; border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.65);
+    background: rgba(255,255,255,0.06);
+    transition: all 0.2s;
+    letter-spacing: 0.01em;
+  }
+  .hero-pill:hover { background: rgba(255,255,255,0.12); color: #fff; border-color: rgba(255,255,255,0.3); }
+  .hero-badge {
+    background: var(--accent);
+    color: var(--ink);
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 999px;
+    white-space: nowrap;
+    align-self: flex-start;
+    margin-top: 4px;
+  }
+
+  /* ─── SECTION ─── */
+  .section { margin-bottom: 2rem; }
+  .section-head {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 10.5px; font-weight: 500; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--faint);
+    margin-bottom: 1rem;
+  }
+  .section-head::after {
+    content: ''; flex: 1; height: 1px; background: var(--border-mid);
+  }
+
+  /* ─── SKILLS ─── */
+  .tags { display: flex; flex-wrap: wrap; gap: 7px; }
+  .tag {
+    font-size: 12.5px; padding: 5px 13px; border-radius: 7px;
+    background: var(--bg-card); border: 1px solid var(--border-strong);
+    color: var(--muted); font-family: 'DM Mono', monospace;
+    transition: all 0.15s;
+  }
+  .tag:hover { border-color: var(--ink); color: var(--ink); }
+
+  /* ─── PROJECT GRID ─── */
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; }
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.25rem 1.3rem;
+    transition: all 0.2s;
+    position: relative; overflow: hidden;
+  }
+  .card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--teal));
+    opacity: 0; transition: opacity 0.2s;
+  }
+  .card:hover { border-color: var(--border-strong); box-shadow: 0 4px 20px rgba(0,0,0,0.07); transform: translateY(-2px); }
+  .card:hover::before { opacity: 1; }
+  .card h3 { font-family: 'Syne', sans-serif; font-size: 14.5px; font-weight: 700; margin-bottom: 7px; letter-spacing: -0.01em; }
+  .card p { font-size: 12.5px; line-height: 1.7; color: var(--muted); margin-bottom: 12px; }
+  .card-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+  .card-tag {
+    font-size: 10.5px; padding: 3px 9px; border-radius: 5px;
+    background: #f0f0eb; color: var(--ink2); font-weight: 500;
+    font-family: 'DM Mono', monospace;
+  }
+  .card-tag.wip { background: #e6fef7; color: #007a5e; }
+
+  /* ─── PHOTOGRAPHY SERIES ─── */
+  .photo-section {
+    background: var(--ink2);
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+  }
+  .photo-section::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 0% 0%, rgba(255,77,28,0.22) 0%, transparent 50%),
+      radial-gradient(ellipse at 100% 100%, rgba(200,240,0,0.15) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .photo-eyebrow {
+    font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--accent2); font-weight: 500; margin-bottom: 0.5rem;
+    position: relative;
+  }
+  .photo-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.35rem;
+    position: relative;
+  }
+  .photo-title em {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: rgba(255,255,255,0.55);
+  }
+  .photo-subtitle {
+    font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+    color: rgba(255,255,255,0.35); margin-bottom: 1.75rem;
+    position: relative;
+  }
+  .photo-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    position: relative;
+  }
+  .photo-block { }
+  .photo-block-label {
+    font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 0.5rem; font-weight: 500;
+  }
+  .photo-block p {
+    font-size: 13.5px; line-height: 1.8;
+    color: rgba(255,255,255,0.68);
+  }
+  .photo-divider {
+    width: 1px; background: rgba(255,255,255,0.1);
+    margin: 0 0.5rem;
+  }
+  .photo-frames {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 1.75rem;
+    position: relative;
+  }
+  .frame {
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 1rem 1.1rem;
+    background: rgba(255,255,255,0.04);
+    transition: background 0.2s;
+  }
+  .frame:hover { background: rgba(255,255,255,0.08); }
+  .frame-num {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 28px;
+    color: rgba(255,255,255,0.15);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .frame-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 12.5px; font-weight: 700;
+    margin-bottom: 5px;
+    color: rgba(255,255,255,0.9);
+  }
+  .frame-desc {
+    font-size: 11.5px; line-height: 1.65;
+    color: rgba(255,255,255,0.45);
+  }
+  .photo-quote {
+    margin-top: 1.75rem;
+    padding: 1.25rem 1.5rem;
+    border-left: 2px solid var(--accent2);
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.7);
+    position: relative;
+    background: rgba(255,77,28,0.06);
+    border-radius: 0 8px 8px 0;
+  }
+
+  /* ─── CERTS ─── */
+  .cert-list { display: flex; flex-direction: column; gap: 8px; }
+  .cert {
+    display: flex; align-items: center; gap: 12px;
+    font-size: 13.5px; padding: 11px 15px; border-radius: 10px;
+    background: var(--bg-card); border: 1px solid var(--border);
+    transition: border-color 0.15s;
+  }
+  .cert:hover { border-color: var(--border-strong); }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--ink); flex-shrink: 0; }
+  .dot.wip { background: var(--teal); }
+  .cert-name { font-weight: 500; flex: 1; font-family: 'Syne', sans-serif; font-size: 13px; }
+  .cert-org { font-size: 11.5px; color: var(--faint); font-family: 'DM Mono', monospace; }
+  .badge {
+    font-size: 10px; padding: 2px 8px; border-radius: 4px;
+    background: #e6fef7; color: #007a5e; font-weight: 500;
+    margin-right: 6px; font-family: 'DM Mono', monospace;
+  }
+
+  /* ─── EDU ─── */
+  .edu {
+    display: flex; gap: 16px; align-items: center;
+    padding: 1.25rem 1.4rem; border: 1px solid var(--border);
+    border-radius: 14px; background: var(--bg-card);
+  }
+  .edu-icon {
+    width: 46px; height: 46px; border-radius: 10px;
+    background: #e6fef7; display: flex; align-items: center;
+    justify-content: center; flex-shrink: 0;
+  }
+  .edu-title { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+  .edu-sub { font-size: 12.5px; color: var(--muted); }
+
+  /* ─── STRENGTHS ─── */
+  .strengths-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; }
+  .strength {
+    padding: 13px 15px; border-radius: 10px;
+    background: var(--bg-card); border: 1px solid var(--border);
+    font-size: 13px; color: var(--muted); line-height: 1.6;
+    transition: border-color 0.15s;
+  }
+  .strength:hover { border-color: var(--border-strong); color: var(--ink); }
+
+  /* ─── FOOTER ─── */
+  footer {
+    margin-top: 3rem; border-top: 1px solid var(--border-mid);
+    padding-top: 1.5rem; text-align: center;
+    font-size: 12px; color: var(--faint);
+    letter-spacing: 0.04em;
+  }
+  footer strong { color: var(--ink2); font-family: 'Syne', sans-serif; }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .hero, .photo-section, .card, .cert, .edu, .strength {
+    animation: fadeUp 0.5s ease both;
+  }
+  .card:nth-child(1) { animation-delay: 0.05s; }
+  .card:nth-child(2) { animation-delay: 0.10s; }
+  .card:nth-child(3) { animation-delay: 0.15s; }
+  .card:nth-child(4) { animation-delay: 0.20s; }
+  .card:nth-child(5) { animation-delay: 0.25s; }
+  .card:nth-child(6) { animation-delay: 0.30s; }
+  .card:nth-child(7) { animation-delay: 0.35s; }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 640px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-badge { display: none; }
+    .photo-body { grid-template-columns: 1fr; }
+    .photo-divider { display: none; }
+    .photo-frames { grid-template-columns: 1fr 1fr; }
+    .nav-links { display: none; }
+  }
+</style>
 </head>
-
 <body>
-    <header>
-        <a href="/index.html" class="navbar-item logo">
-            Taskey
-        </a>
-        <ul class="not_auth">
-            <li><a href="#features">Features</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li>
-                <a href="#" class="navbar-item">
-                    Login
-                </a>
-            </li>
-            <li>
-                <a href="#" class="navbar-item">
-                    Sign Up
-                </a>
-            </li>
-        </ul>
-    </header>
-    <div class="container">
-        <main class="landing">
-            <section id="hero">
-                <div>
-                    <h1>Organize your work and life, finally.</h1>
-                    <p>Manage your tasks efficiently and effortlessly.</p>
-                    <a href="#" class="btn">Start for free</a>
-                </div>
-                <div class="hero_img">
-                    <img src="/static/imges/home_page.png" alt="">
-                </div>
-            </section>
-            <section id="features" class="landing-container">
-                <div>
-                    <h2>Features</h2>
-                    <div class="features-list">
-                        <div class="feature">
-                            <h3>User Authentication</h3>
-                            <p>Secure login and registration for all users.</p>
-                        </div>
-                        <div class="feature">
-                            <h3>Task Management</h3>
-                            <p>Create, read, update, and delete tasks with ease.</p>
-                        </div>
-                        <div class="feature">
-                            <h3>Categories</h3>
-                            <p>Organize your tasks into categories.</p>
-                        </div>
-                        <div class="feature">
-                            <h3>Prioritization</h3>
-                            <p>Set due dates and priorities for your tasks.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="about" class="landing-container">
-                <div>
-                    <h2>About Us</h2>
-                    <p>Taskey is a task management application that helps you organize your work and life. Our mission is to
-                        make task management simple and efficient for everyone.</p>
-                    <div class="missions">
-                        <div class="mission-item">
-                            <i class="fa-solid fa-plus"></i>
-                            Add a task
-                        </div>
-                        <div class="mission-item">
-                            <i class="fa-solid fa-calendar"></i>
-                            Set a due date
-                        </div>
-                        <div class="mission-item">
-                            <i class="fa-solid fa-triangle-exclamation"></i>
-                            Give tasks priority level
-                        </div>
-                        <div class="mission-item">
-                            <i class="fa-solid fa-hashtag"></i>
-                            Organize tasks into categories
-                        </div>
-                        <div class="mission-item">
-                            <i class="fa-regular fa-circle-check"></i>
-                            Complete the Task
-                        </div>
-                    </div>
-                </div>
-                <video id="myVideo" autoplay muted playsinline>
-                    <source src="/videos/about_video.webm" type="video/webm">
-                </video>
-            </section>
-            <section id="contact">
-                <div>
-                    <h2>Contact Us</h2>
-                    <p>Have a question or feedback? We'd love to hear from you! <a
-                            href="mailto:info@taskey.com">info@taskey.com</a>.</p>
-                </div>
-            </section>
-            <footer>
-                <div>
-                    <p>&copy; 2024 Taskey. All rights reserved.</p>
-                </div>
-            </footer>
-        </main>
-        <script>
-            document.addEventListener('DOMContentLoaded', (event) => {
-                const video = document.getElementById('myVideo');
 
-                // Function to play video when in view and reset when out of view
-                const handleIntersection = (entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            video.play().catch(error => {
-                                console.log('Video play was prevented:', error);
-                            });
-                        } else {
-                            video.pause();
-                            video.currentTime = 0; // Reset the video to the beginning
-                        }
-                    });
-                };
+<nav>
+  <div class="nav-logo">A<span>.</span>Badawii</div>
+  <div class="nav-links">
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+    <a href="#certs">Certs</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
 
-                // Create intersection observer
-                const observer = new IntersectionObserver(handleIntersection, {
-                    threshold: 0.5 // Adjust this value as needed
-                });
+<div class="wrap">
 
-                // Start observing the video element
-                observer.observe(video);
-            });
-        </script>
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-label">Available for work · Egypt</div>
+        <h1>Alaa<br><em>Badawii</em></h1>
+        <div class="hero-role">Backend Engineer · Python · Flask · REST APIs</div>
+        <p class="hero-summary">Backend Software Engineer specializing in Python and RESTful API development — building scalable systems with Flask, SQLAlchemy, and MySQL. Strong focus on clean architecture, system design, and production-ready engineering.</p>
+        <div class="hero-pills" id="contact">
+          <a class="hero-pill" href="/cdn-cgi/l/email-protection#d6b7bab7b7f8b4b7b2b7a1afe2e6e296b1bbb7bfbaf8b5b9bb">✉ <span class="__cf_email__" data-cfemail="99f8f5f8f8b7fbf8fdf8eee0ada9add9fef4f8f0f5b7faf6f4">[email&#160;protected]</span></a>
+          <a class="hero-pill" href="https://linkedin.com/in/AlaaBadawii" target="_blank">in AlaaBadawii</a>
+          <a class="hero-pill" href="https://github.com/AlaaBadawii" target="_blank">⌥ github.com/AlaaBadawii</a>
+          <span class="hero-pill">📍 Sharqia, Egypt</span>
+          <span class="hero-pill">📞 +201029171634</span>
+        </div>
+      </div>
+      <div class="hero-badge">Backend<br>Engineer</div>
     </div>
-</body>
+  </div>
 
+  <!-- SKILLS -->
+  <div class="section">
+    <div class="section-head">Skills</div>
+    <div class="tags">
+      <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">REST APIs</span>
+      <span class="tag">SQLAlchemy</span><span class="tag">MySQL</span><span class="tag">SQLite</span>
+      <span class="tag">MVC Architecture</span><span class="tag">System Design</span><span class="tag">API Design</span>
+      <span class="tag">OOP</span><span class="tag">Data Modeling</span><span class="tag">Unit Testing</span>
+      <span class="tag">Jinja2</span><span class="tag">Flask-Login</span><span class="tag">CORS</span>
+      <span class="tag">C</span><span class="tag">JavaScript</span><span class="tag">Git & GitHub</span><span class="tag">Linux</span>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="section" id="projects">
+    <div class="section-head">Projects</div>
+    <div class="grid">
+      <div class="card">
+        <h3>AirBnB Clone – RESTful API</h3>
+        <p>Modular API using Flask Blueprints and app factory pattern. Full CRUD with validation, error handling, password hashing, and CORS for frontend integration.</p>
+        <div class="card-tags"><span class="card-tag">Flask</span><span class="card-tag">SQLAlchemy</span><span class="card-tag">MySQL</span></div>
+      </div>
+      <div class="card">
+        <h3>AirBnB Clone – Backend Integration</h3>
+        <p>9 dynamic routes with server-side rendering via Jinja2. Integrated file-based and relational DB storage with dynamic querying and sorting.</p>
+        <div class="card-tags"><span class="card-tag">Flask</span><span class="card-tag">Jinja2</span><span class="card-tag">MySQL</span></div>
+      </div>
+      <div class="card">
+        <h3>AirBnB Clone – Console</h3>
+        <p>Extended CLI supporting File Storage and DB Storage via environment config. Maintained full backward compatibility across all commands.</p>
+        <div class="card-tags"><span class="card-tag">Python</span><span class="card-tag">OOP</span><span class="card-tag">SQLAlchemy</span></div>
+      </div>
+      <div class="card">
+        <h3>Taskey – Task Management</h3>
+        <p>Backend for task management with priorities, groups, deadlines, authentication, and session management. Flexible DB setup for dev and production.</p>
+        <div class="card-tags"><span class="card-tag">Flask</span><span class="card-tag">SQLAlchemy</span><span class="card-tag">MySQL</span><span class="card-tag">SQLite</span></div>
+      </div>
+      <div class="card">
+        <h3>Quizey – AI Exam Platform</h3>
+        <p>Exam and training platform with role-based access, shareable links, and performance tracking. AI-based explanations and Docker + PostgreSQL deployment in progress.</p>
+        <div class="card-tags"><span class="card-tag">Python</span><span class="card-tag">MySQL</span><span class="card-tag wip">In Progress</span></div>
+      </div>
+      <div class="card">
+        <h3>Python OOP – Almost a Circle</h3>
+        <p>Class hierarchy with inheritance, encapsulation, validation, JSON serialization, file persistence, and unit testing.</p>
+        <div class="card-tags"><span class="card-tag">Python</span><span class="card-tag">OOP</span><span class="card-tag">Unit Testing</span></div>
+      </div>
+      <div class="card">
+        <h3>Printf – C Project</h3>
+        <p>Custom implementation of printf in C using variadic functions, format parsing, and low-level output handling.</p>
+        <div class="card-tags"><span class="card-tag">C</span><span class="card-tag">Systems</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT ME -->
+  <div class="photo-section" id="about">
+    <div class="photo-eyebrow">Beyond the Code</div>
+    <div class="photo-title">A bit about<br><em>who I am</em></div>
+    <div class="photo-subtitle">The person behind the keyboard</div>
+
+    <div class="photo-body">
+      <div class="photo-block">
+        <div class="photo-block-label">Who I am</div>
+        <p>
+          I'm Alaa — a backend engineer from Egypt who genuinely loves building things that work well.
+          I care a lot about writing clean code, solving real problems, and growing every single day.
+          Outside of work, I'm just as driven: I think like an entrepreneur, read to stay curious,
+          and believe the best engineers are the ones who never stop learning.
+        </p>
+      </div>
+      <div class="photo-divider"></div>
+      <div class="photo-block">
+        <div class="photo-block-label">What drives me</div>
+        <p>
+          I'm not just here to write code — I want to build products that matter.
+          I'm always thinking about ideas, how systems work, and what I can create next.
+          Whether it's a side project, a new technology, or a business idea,
+          I approach everything with the same energy: focus, consistency, and a real desire to make it great.
+        </p>
+      </div>
+    </div>
+
+    <div class="photo-frames">
+      <div class="frame">
+        <div class="frame-num">⚽</div>
+        <div class="frame-title">Football</div>
+        <div class="frame-desc">My favorite way to switch off. Playing or watching — football keeps me grounded and competitive.</div>
+      </div>
+      <div class="frame">
+        <div class="frame-num">📖</div>
+        <div class="frame-title">Reading</div>
+        <div class="frame-desc">I read to think better. Tech, business, self-growth — books are how I stay one step ahead.</div>
+      </div>
+      <div class="frame">
+        <div class="frame-num">🎨</div>
+        <div class="frame-title">Art & Design</div>
+        <div class="frame-desc">Good design matters to me. I appreciate things that are built with intention — in code and in life.</div>
+      </div>
+      <div class="frame">
+        <div class="frame-num">💡</div>
+        <div class="frame-title">Entrepreneurship</div>
+        <div class="frame-desc">I think like a builder. I'm always asking: what problem exists, and how can I solve it?</div>
+      </div>
+    </div>
+
+    <div class="photo-quote">
+      "I want to build things that last — clean backends, great products, and a career I'm proud of."
+    </div>
+  </div>
+
+  <!-- CERTS -->
+  <div class="section" id="certs">
+    <div class="section-head">Certifications</div>
+    <div class="cert-list">
+      <div class="cert"><div class="dot"></div><span class="cert-name">ALX Software Engineering – Backend Specialization</span><span class="cert-org">ALX Africa</span></div>
+      <div class="cert"><div class="dot"></div><span class="cert-name">ALX AICE – AI Career Essentials</span><span class="cert-org">ALX Africa</span></div>
+      <div class="cert"><div class="dot"></div><span class="cert-name">System Design Program</span><span class="cert-org">Manara</span></div>
+      <div class="cert"><div class="dot wip"></div><span class="cert-name">ALX Professional Foundations <span class="badge">In Progress</span></span><span class="cert-org">ALX Africa</span></div>
+      <div class="cert"><div class="dot wip"></div><span class="cert-name">Node.js Backend Development Program <span class="badge">In Progress</span></span><span class="cert-org">Manara</span></div>
+    </div>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="section">
+    <div class="section-head">Education</div>
+    <div class="edu">
+      <div class="edu-icon">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="#0F6E56" stroke-width="1.6">
+          <path d="M11 2L2 8l9 5.5L20 8l-9-6z"/>
+          <path d="M2 8v7l9 5 9-5V8"/>
+        </svg>
+      </div>
+      <div>
+        <div class="edu-title">Bachelor's in Management Information Systems (MIS)</div>
+        <div class="edu-sub">Modern Academy, Maadi &nbsp;·&nbsp; October 2019 – July 2023</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STRENGTHS -->
+  <div class="section">
+    <div class="section-head">Strengths</div>
+    <div class="strengths-grid">
+      <div class="strength">Team collaboration on software development projects</div>
+      <div class="strength">Clean and maintainable backend code</div>
+      <div class="strength">Understanding and improving existing systems</div>
+      <div class="strength">Continuous learning in scalable backend engineering</div>
+    </div>
+  </div>
+
+  <footer>
+    <strong>Alaa Ahmed Mohamed Badawii</strong><br>
+    alaa.badawy404@gmail.com · +201029171634 · alaabadawii.github.io
+  </footer>
+
+</div>
+</body>
 </html>
