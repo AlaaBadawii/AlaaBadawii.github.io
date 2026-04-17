@@ -1047,7 +1047,7 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .approach-photos .approach-photo:last-child {
+  .approach-photos .approach-photo:first-child {
     display: none;
   }
 
