@@ -322,7 +322,7 @@ section {
 }
 
 .about-photo {
-  min-height: 480px;
+  min-height: 300px;
   border-radius: 18px;
   border: 1px solid var(--border);
   background-color: var(--bg3);
