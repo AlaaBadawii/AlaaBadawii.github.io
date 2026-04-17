@@ -322,12 +322,13 @@ section {
 }
 
 .about-photo {
-  min-height: 300px;
+  min-height: 230px;
+  height: 100%;
   border-radius: 18px;
   border: 1px solid var(--border);
   background-color: var(--bg3);
   background-image: linear-gradient(rgba(22, 24, 28, 0.12), rgba(22, 24, 28, 0.3)),
-    url('https://midhtech.com/front/img/home-banner.png');
+    url('https://elm.net.au/wp-content/uploads/2020/05/Consulting.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
