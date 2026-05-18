@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alaa Badawii — Backend Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <nav>
+    <div class="nav-logo">ALAA BADAWII</div>
+    <ul class="nav-links">
+      <li><a href="#pitch">Pitch</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <section id="hero">
+    <div class="hero-bg-shape"></div>
+    <div class="hero-flower">
+      <svg class="flower-svg" viewBox="0 0 200 200" fill="none">
+        <ellipse cx="100" cy="55" rx="38" ry="55" fill="#7c3aed" transform="rotate(0 100 100)" />
+        <ellipse cx="100" cy="55" rx="38" ry="55" fill="#5b21b6" transform="rotate(60 100 100)" />
+        <ellipse cx="100" cy="55" rx="38" ry="55" fill="#22d3ee" transform="rotate(120 100 100)" />
+        <ellipse cx="100" cy="55" rx="38" ry="55" fill="#7c3aed" transform="rotate(180 100 100)" />
+        <ellipse cx="100" cy="55" rx="38" ry="55" fill="#5b21b6" transform="rotate(240 100 100)" />
+        <ellipse cx="100" cy="55" rx="38" ry="55" fill="#22d3ee" transform="rotate(300 100 100)" />
+      </svg>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-tag">Backend Engineering</div>
+      <h1 class="hero-name">
+        <span>Alaa</span> Badawii
+      </h1>
+      <p class="hero-sub">
+        Software Engineer specializing in scalable backend architectures and AI-driven solutions. Currently architecting
+        enterprise-grade AI Agents and RAG systems using Gemini and Vertex AI while mastering DevOps practices like
+        Docker and Kubernetes.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="https://github.com/AlaaBadawii" target="_blank" class="btn-outline">GitHub Profile</a>
+        <a href="https://drive.google.com/file/d/1dCrc2h94jZLS0JLJvZeCFy6KcrIwBPxg/view?usp=sharing" target="_blank"
+          class="btn-outline">Get Resume</a>
+      </div>
+
+      <div class="hero-contacts">
+        <a href="mailto:alaabadawii404@gmail.com">alaabadawii404@gmail.com</a>
+        <a href="tel:+201029171634">+20 102 917 1634</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="pitch">
+    <p class="section-label">// Meet The Engineer</p>
+    <div class="section-title"><span class="grad">Elevator Pitch</span></div>
+    <div class="section-divider"></div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6vw; align-items: center;">
+
+      <div>
+        <p style="color: var(--muted); line-height: 1.85; font-size: 1rem; margin-bottom: 1.2rem;">
+          I'm <strong style="color: var(--white);">Alaa Badawii</strong>, a Backend Software Engineer based in Cairo. My
+          core stack is <strong style="color: var(--white);">Python, Flask, and SQL</strong> — and I'm currently deep
+          into <strong style="color: var(--white);">AI Agents and RAG systems</strong> with Gemini and Vertex AI,
+          alongside containerized DevOps with Docker and Kubernetes.
+        </p>
+        <p style="color: var(--muted); line-height: 1.85; font-size: 1rem; margin-bottom: 1.2rem;">
+          I've built real-time validation systems, full-stack task managers, and versioned exam platforms with
+          AI-powered analytics. I don't just write code — I engineer solutions designed for performance,
+          maintainability, and real-world constraints.
+        </p>
+        <p style="color: var(--muted); line-height: 1.85; font-size: 1rem; margin-bottom: 2rem;">
+          Watch the 60-second video to see how I communicate and think.
+        </p>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="https://app.heygen.com/videos/avatar-video-0d37a6c4425f4b88a7ea954548915bce" target="_blank"
+            class="btn-primary">▶ Watch Pitch</a>
+          <a href="mailto:alaabadawii404@gmail.com" class="btn-outline">Get In Touch</a>
+        </div>
+      </div>
+
+      <div>
+        <a href="https://app.heygen.com/videos/avatar-video-0d37a6c4425f4b88a7ea954548915bce" target="_blank"
+          style="display: block; aspect-ratio: 16/9; background: var(--bg3); border: 1px solid rgba(124,58,237,0.3); border-radius: 16px; overflow: hidden; position: relative; text-decoration: none; transition: border-color 0.3s, transform 0.3s;"
+          onmouseover="this.style.borderColor='#22d3ee';this.style.transform='translateY(-4px)'"
+          onmouseout="this.style.borderColor='rgba(124,58,237,0.3)';this.style.transform='translateY(0)'">
+          <div
+            style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(124,58,237,0.15), rgba(34,211,238,0.1));">
+          </div>
+          <div
+            style="position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 32px 32px;">
+          </div>
+          <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;">
+            <div
+              style="width: 72px; height: 72px; background: rgba(124,58,237,0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 40px rgba(124,58,237,0.4);">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="white" style="margin-left:4px">
+                <polygon points="5 3 19 12 5 21 5 3" />
+              </svg>
+            </div>
+          </div>
+          <div style="position: absolute; bottom: 16px; left: 0; right: 0; text-align: center;">
+            <span
+              style="background: rgba(22,24,28,0.85); border: 1px solid rgba(255,255,255,0.07); padding: 0.35rem 1rem; border-radius: 999px; font-size: 0.78rem; color: var(--muted);">Alaa
+              Badawii · Elevator Pitch · 2026</span>
+          </div>
+        </a>
+        <p style="text-align: center; margin-top: 1rem; font-size: 0.8rem; color: var(--muted);">Click to watch on
+          HeyGen</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="about">
+    <p class="section-label">// Professional</p>
+    <div class="section-title"><span class="grad">About Me</span></div>
+    <div class="section-divider"></div>
+
+    <div class="about-flower">
+      <svg class="flower-svg" viewBox="0 0 200 200" fill="none">
+        <ellipse cx="100" cy="55" rx="38" ry="55" fill="#7c3aed" transform="rotate(0 100 100)" />
+        <ellipse cx="100" cy="55" rx="38" ry="55" fill="#5b21b6" transform="rotate(60 100 100)" />
+        <ellipse cx="100" cy="55" rx="38" ry="55" fill="#22d3ee" transform="rotate(120 100 100)" />
+        <ellipse cx="100" cy="55" rx="38" ry="55" fill="#7c3aed" transform="rotate(180 100 100)" />
+        <ellipse cx="100" cy="55" rx="38" ry="55" fill="#5b21b6" transform="rotate(240 100 100)" />
+        <ellipse cx="100" cy="55" rx="38" ry="55" fill="#22d3ee" transform="rotate(300 100 100)" />
+      </svg>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I'm a Backend Software Engineer with hands-on experience building scalable systems using Python, Flask, and
+          SQL. I focus on clean architecture, database design, and real-world engineering practices.</p>
+        <p>From designing RESTful APIs to implementing authentication systems and managing complex data models, I
+          approach every project with attention to performance, maintainability, and production readiness. I'm
+          passionate about understanding the "why" behind design decisions.</p>
+        <p>Currently expanding into system design and AI-assisted platforms, while mentoring other engineers and staying
+          involved in the community.</p>
+
+        <div class="about-stats">
+          <div>
+            <div class="stat-num">5+</div>
+            <div class="stat-label">Backend Projects</div>
+          </div>
+          <div>
+            <div class="stat-num">3+</div>
+            <div class="stat-label">Years Focus</div>
+          </div>
+          <div>
+            <div class="stat-num">100%</div>
+            <div class="stat-label">Committed</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-text">
+        <p>My toolkit includes Flask for web applications, SQL Alchemy for ORM work, PostgreSQL and MySQL for relational
+          databases, and Git for version control. I'm experienced in building modular systems with proper error
+          handling, validation, and testing.</p>
+        <p>Beyond code, I value collaboration, clear communication, and continuous learning. I've completed specialized
+          training in system design through Manara and the ALX Software Engineering Program with backend specialization.
+        </p>
+        <p>I'm always exploring new technologies and methodologies. Whether it's optimizing database queries, designing
+          API architectures, or implementing security best practices, I approach each challenge as an opportunity to
+          grow and deliver better solutions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <p class="section-label">// Technical Arsenal</p>
+    <div class="section-title"><span class="grad">Skills & Tools</span></div>
+    <div class="section-divider"></div>
+
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-card-icon">🐍</div>
+        <div class="skill-card-title">Languages</div>
+        <div class="skill-tags">
+          <span class="tag purple">Python</span>
+          <span class="tag purple">C</span>
+          <span class="tag">SQL</span>
+          <span class="tag cyan">Node.js</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-icon">⚙️</div>
+        <div class="skill-card-title">Backend & APIs</div>
+        <div class="skill-tags">
+          <span class="tag cyan">Flask</span>
+          <span class="tag cyan">REST APIs</span>
+          <span class="tag purple">SQL Alchemy</span>
+          <span class="tag">MVC</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-icon">🗄️</div>
+        <div class="skill-card-title">Databases</div>
+        <div class="skill-tags">
+          <span class="tag cyan">PostgreSQL</span>
+          <span class="tag purple">MySQL</span>
+          <span class="tag">SQLite</span>
+          <span class="tag purple">Alembic</span>
+          <span class="tag cyan">MongoDB</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-icon">🛠️</div>
+        <div class="skill-card-title">Tools & Practices</div>
+        <div class="skill-tags">
+          <span class="tag">Git & GitHub</span>
+          <span class="tag cyan">Linux/CLI</span>
+          <span class="tag purple">Docker</span>
+          <span class="tag purple">Kubernetes</span>
+          <span class="tag">AI Tools</span>
+          <span class="tag">Postman</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-icon">🧠</div>
+        <div class="skill-card-title">Core Competencies</div>
+        <div class="skill-tags">
+          <span class="tag cyan">System Design</span>
+          <span class="tag purple">API Design</span>
+          <span class="tag">OOP</span>
+          <span class="tag cyan">Data Modeling</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-icon">✅</div>
+        <div class="skill-card-title">Testing & Quality</div>
+        <div class="skill-tags">
+          <span class="tag purple">Unit Testing</span>
+          <span class="tag">Integration Tests</span>
+          <span class="tag cyan">API Testing</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach">
+    <div class="approach-photos">
+      <div class="approach-photo approach-photo-a"></div>
+      <div class="approach-photo approach-photo-b"></div>
+    </div>
+
+    <div class="approach-bottom">
+      <div class="approach-flower-br">
+        <svg class="flower-svg" viewBox="0 0 200 200" fill="none">
+          <ellipse cx="100" cy="55" rx="38" ry="55" fill="#7c3aed" transform="rotate(0 100 100)" />
+          <ellipse cx="100" cy="55" rx="38" ry="55" fill="#5b21b6" transform="rotate(60 100 100)" />
+          <ellipse cx="100" cy="55" rx="38" ry="55" fill="#22d3ee" transform="rotate(120 100 100)" />
+        </svg>
+      </div>
+
+      <div>
+        <div class="approach-big-title">My <br>Approach</div>
+      </div>
+
+      <div>
+        <p class="approach-text">
+          I don't just write code — I engineer solutions. Every backend system I build is designed with scalability,
+          performance, and maintainability in mind. My approach is methodical, test-driven, and always grounded in
+          real-world constraints.
+        </p>
+      </div>
+      <div class="approach-points">
+        <div class="approach-point">
+          <div class="approach-point-title">Understanding the problem first</div>
+          <p class="approach-point-text">Before architecting, I map requirements, identify constraints, and challenge
+            assumptions. Good design starts with asking the right questions.</p>
+        </div>
+        <div class="approach-point">
+          <div class="approach-point-title">Clean, modular code</div>
+          <p class="approach-point-text">Structure matters. I follow SOLID principles, maintain clear separation of
+            concerns, and write code that teammates can understand and extend without friction.</p>
+        </div>
+        <div class="approach-point">
+          <div class="approach-point-title">Data-driven design</div>
+          <p class="approach-point-text">Database schema, API contracts, and system architecture are all deliberate. I
+            spend time designing data models that reflect reality and scale with your business needs.</p>
+        </div>
+        <div class="approach-point">
+          <div class="approach-point-title">Test coverage & verification</div>
+          <p class="approach-point-text">I write tests not as an afterthought, but as part of design. Unit tests,
+            integration tests, and API tests ensure reliability and catch regressions early.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <p class="section-label">// Work & Portfolio</p>
+    <div class="section-title"><span class="grad">Featured Projects</span></div>
+    <div class="section-divider"></div>
+
+    <div class="projects-flower">
+      <svg class="flower-svg" viewBox="0 0 200 200" fill="none">
+        <ellipse cx="100" cy="55" rx="38" ry="55" fill="#7c3aed" transform="rotate(0 100 100)" />
+        <ellipse cx="100" cy="55" rx="38" ry="55" fill="#5b21b6" transform="rotate(60 100 100)" />
+        <ellipse cx="100" cy="55" rx="38" ry="55" fill="#22d3ee" transform="rotate(120 100 100)" />
+        <ellipse cx="100" cy="55" rx="38" ry="55" fill="#7c3aed" transform="rotate(180 100 100)" />
+        <ellipse cx="100" cy="55" rx="38" ry="55" fill="#5b21b6" transform="rotate(240 100 100)" />
+        <ellipse cx="100" cy="55" rx="38" ry="55" fill="#22d3ee" transform="rotate(300 100 100)" />
+      </svg>
+    </div>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-tag">Full Stack</div>
+        <div class="project-name">Taskey</div>
+        <p class="project-desc">
+          A full-stack task management system with user authentication, lifecycle management, and database persistence.
+          Features include task creation, progress tracking, priority levels, and theme persistence.
+        </p>
+        <div class="project-tech">
+          <span class="project-tech-item">Flask</span>
+          <span class="project-tech-item">SQL Alchemy</span>
+          <span class="project-tech-item">MySQL</span>
+          <span class="project-tech-item">HTML/CSS</span>
+          <span class="project-tech-item">Modular Architecture</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-tag">Backend</div>
+        <div class="project-name">Airbnb Clone</div>
+        <p class="project-desc">
+          Modular backend system supporting multiple storage engines. Designed RESTful APIs with structured routing,
+          validation, and server-side rendering integration using Jinja2.
+        </p>
+        <div class="project-tech">
+          <span class="project-tech-item">Python</span>
+          <span class="project-tech-item">Flask</span>
+          <span class="project-tech-item">SQL Alchemy</span>
+          <span class="project-tech-item">REST API</span>
+          <span class="project-tech-item">MySQL</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-tag">Backend</div>
+        <div class="project-name">Quizey V1</div>
+        <p class="project-desc">
+          Exam platform backend with token-based authentication, email verification, and password reset workflows.
+          Implements quiz lifecycle management with time-based availability and participant limits.
+        </p>
+        <div class="project-tech">
+          <span class="project-tech-item">Flask</span>
+          <span class="project-tech-item">REST APIs</span>
+          <span class="project-tech-item">PostgreSQL</span>
+          <span class="project-tech-item">Alembic</span>
+          <span class="project-tech-item">Authentication</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-tag">In Progress</div>
+        <div class="project-name">Quizey V2</div>
+        <p class="project-desc">
+          Extending Quizey V1 with AI-assisted student progress analysis, personalized feedback, parent dashboards, and
+          containerized Docker deployment with production-grade security practices.
+        </p>
+        <div class="project-tech">
+          <span class="project-tech-item">Flask</span>
+          <span class="project-tech-item">AI/ML Integration</span>
+          <span class="project-tech-item">Docker</span>
+          <span class="project-tech-item">PostgreSQL</span>
+          <span class="project-tech-item">Security</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-tag">Grad Project</div>
+        <div class="project-name">IBuild</div>
+        <p class="project-desc">
+          PC component compatibility platform. Designed a real-time validation system for PC component matching using
+          JavaScript and PHP, ensuring hardware selections are compatible before purchase.
+        </p>
+        <div class="project-tech">
+          <span class="project-tech-item">HTML5</span>
+          <span class="project-tech-item">CSS3</span>
+          <span class="project-tech-item">JavaScript</span>
+          <span class="project-tech-item">PHP</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-tag">Systems</div>
+        <div class="project-name">Custom printf</div>
+        <p class="project-desc">
+          Low-level C implementation of printf using variadic functions and pointer arithmetic. Demonstrates deep
+          understanding of memory management and standard library internals.
+        </p>
+        <div class="project-tech">
+          <span class="project-tech-item">C</span>
+          <span class="project-tech-item">Variadic Functions</span>
+          <span class="project-tech-item">Pointer Arithmetic</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="problem-flower">
+    <svg class="flower-svg" viewBox="0 0 200 200" fill="none">
+      <ellipse cx="100" cy="55" rx="38" ry="55" fill="#7c3aed" transform="rotate(0 100 100)" />
+      <ellipse cx="100" cy="55" rx="38" ry="55" fill="#5b21b6" transform="rotate(60 100 100)" />
+      <ellipse cx="100" cy="55" rx="38" ry="55" fill="#22d3ee" transform="rotate(120 100 100)" />
+    </svg>
+  </div>
+
+  <p class="section-label">// Engineering Methodology</p>
+  <div class="section-title" style="margin-bottom: 2rem;"><span class="grad">How I Think</span></div>
+
+  <div class="problem-content">
+    <p class="problem-intro">
+      Backend engineering isn't just about making things work — it's about making them work right. I approach every
+      problem with a structured methodology that emphasizes clarity, performance, and maintainability. Here's how I
+      tackle challenges:
+    </p>
+
+    <div class="problem-points">
+      <div class="problem-point">
+        <div class="problem-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="1"></circle>
+            <path d="M12 1v6m0 6v6"></path>
+            <path d="M4.22 4.22l4.24 4.24m-4.24 7.08l4.24 4.24"></path>
+            <path d="M1 12h6m6 0h6"></path>
+            <path d="M4.22 19.78l4.24-4.24m7.08 4.24l4.24-4.24"></path>
+            <path d="M19.78 4.22l-4.24 4.24m4.24 7.08l-4.24 4.24"></path>
+          </svg>
+        </div>
+        <div>
+          <div class="problem-point-title">Breaking down complexity</div>
+          <p class="problem-point-text">Big systems are made of small, well-defined pieces. I decompose problems into
+            modules, identify dependencies, and design interfaces that are clear and maintainable. This makes everything
+            easier to test, debug, and scale.</p>
+        </div>
+      </div>
+
+      <div class="problem-point">
+        <div class="problem-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3"></polyline>
+            <line x1="12" y1="12" x2="20" y2="7.5"></line>
+            <line x1="12" y1="12" x2="12" y2="21"></line>
+            <line x1="12" y1="12" x2="4" y2="7.5"></line>
+          </svg>
+        </div>
+        <div>
+          <div class="problem-point-title">Analyzing requirements and constraints</div>
+          <p class="problem-point-text">Before writing code, I break down the problem. I map data flows, identify edge
+            cases, and challenge assumptions. This upfront thinking prevents costly rewrites and ensures solutions fit
+            real-world constraints — performance, scale, and maintainability included.</p>
+        </div>
+      </div>
+
+      <div class="problem-point">
+        <div class="problem-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 2.2"></path>
+          </svg>
+        </div>
+        <div>
+          <div class="problem-point-title">Debugging and optimization</div>
+          <p class="problem-point-text">Bugs are inevitable — slow responses shouldn't be. I approach debugging
+            methodically: reproduce, isolate, fix, verify. For performance, I profile before optimizing, focusing on
+            query efficiency, session management, and caching where they matter most.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <section id="certs">
+    <p class="section-label">// Credentials</p>
+    <div class="section-title"><span class="grad">Certificates</span></div>
+    <div class="section-divider"></div>
+    <div class="certs-grid">
+      <div class="cert-card">
+        <div class="cert-icon">🎓</div>
+        <div>
+          <div class="cert-name">ALX Software Engineering</div>
+          <div class="cert-org">Backend Specialization · ALX Africa</div>
+          <span class="cert-status">Completed</span>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">🎓</div>
+        <div>
+          <div class="cert-name">ALX AICE</div>
+          <div class="cert-org">AI Career Essentials · ALX Africa</div>
+          <span class="cert-status">Completed</span>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">🎓</div>
+        <div>
+          <div class="cert-name">System Design Program</div>
+          <div class="cert-org">Manara</div>
+          <span class="cert-status">Completed</span>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">🎓</div>
+        <div>
+          <div class="cert-name">Node.js Backend Development</div>
+          <div class="cert-org">Manara</div>
+          <span class="cert-status">Completed</span>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">🎓</div>
+        <div>
+          <div class="cert-name">ALX Professional Foundations</div>
+          <div class="cert-org">ALX Africa</div>
+          <span class="cert-status">Completed</span>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">🔧</div>
+        <div>
+          <div class="cert-name">DevOps Engineering Program</div>
+          <div class="cert-org">Docker, K8s, CI/CD, IaC · Manara</div>
+          <span class="cert-status progress">In Progress</span>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">🔧</div>
+        <div>
+          <div class="cert-name">Build with AI: Masr Edition</div>
+          <div class="cert-org">Gemini & Vertex AI · Google × ITI</div>
+          <span class="cert-status progress">In Progress</span>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">🎓</div>
+        <div>
+          <div class="cert-name">B.Sc. Management Information Systems</div>
+          <div class="cert-org">Modern Academy, Maadi · 2019–2023</div>
+          <span class="cert-status">Completed</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-strip">
+      <div class="contact-strip-bg">
+        <div class="contact-strip-words">
+          <span class="contact-strip-word">SOFTWARE</span>
+          <div class="contact-strip-flower">
+            <svg class="flower-svg" viewBox="0 0 200 200" fill="none">
+              <ellipse cx="100" cy="55" rx="38" ry="55" fill="#7c3aed" transform="rotate(0 100 100)" />
+              <ellipse cx="100" cy="55" rx="38" ry="55" fill="#5b21b6" transform="rotate(60 100 100)" />
+              <ellipse cx="100" cy="55" rx="38" ry="55" fill="#22d3ee" transform="rotate(120 100 100)" />
+              <ellipse cx="100" cy="55" rx="38" ry="55" fill="#7c3aed" transform="rotate(180 100 100)" />
+              <ellipse cx="100" cy="55" rx="38" ry="55" fill="#5b21b6" transform="rotate(240 100 100)" />
+              <ellipse cx="100" cy="55" rx="38" ry="55" fill="#22d3ee" transform="rotate(300 100 100)" />
+            </svg>
+          </div>
+          <span class="contact-strip-word">ENGINEER</span>
+        </div>
+      </div>
+      <div class="contact-strip-overlay"></div>
+    </div>
+
+    <div class="contact-body">
+      <div class="contact-title-row">
+        <div class="contact-flower-icon">
+          <svg class="flower-svg" viewBox="0 0 200 200" fill="none">
+            <ellipse cx="100" cy="55" rx="38" ry="55" fill="#3b1f6e" transform="rotate(0 100 100)" />
+            <ellipse cx="100" cy="55" rx="38" ry="55" fill="#2d1854" transform="rotate(60 100 100)" />
+            <ellipse cx="100" cy="55" rx="38" ry="55" fill="#163a4a" transform="rotate(120 100 100)" />
+            <ellipse cx="100" cy="55" rx="38" ry="55" fill="#3b1f6e" transform="rotate(180 100 100)" />
+            <ellipse cx="100" cy="55" rx="38" ry="55" fill="#2d1854" transform="rotate(240 100 100)" />
+            <ellipse cx="100" cy="55" rx="38" ry="55" fill="#163a4a" transform="rotate(300 100 100)" />
+          </svg>
+        </div>
+        <div class="contact-big-title">Get In Touch</div>
+      </div>
+
+      <p class="contact-tagline">
+        Open to backend engineering roles, freelance projects, and collaborations. Always happy to discuss new
+        opportunities, technical challenges, or just connect. Reach out through any channel below — I usually respond
+        within 24 hours.
+      </p>
+
+      <div class="contact-bar">
+        <a href="mailto:alaabadawii404@gmail.com" class="cbar-item">
+          <div class="cbar-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m2 7 10 7 10-7" />
+            </svg>
+          </div>
+          <div>
+            <div style="font-size: 0.85rem; font-weight: 500;">Email</div>
+            <div style="font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem;">alaabadawii404@gmail.com</div>
+          </div>
+        </a>
+
+        <a href="tel:+201029171634" class="cbar-item">
+          <div class="cbar-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.61 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.06 6.06l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+          </div>
+          <div>
+            <div style="font-size: 0.85rem; font-weight: 500;">Phone</div>
+            <div style="font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem;">+20 102 917 1634</div>
+          </div>
+        </a>
+
+        <a href="https://github.com/AlaaBadawii" target="_blank" class="cbar-item">
+          <div class="cbar-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+            </svg>
+          </div>
+          <div>
+            <div style="font-size: 0.85rem; font-weight: 500;">GitHub</div>
+            <div style="font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem;">github.com/AlaaBadawii</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 <span class="footer-grad">Alaa Badawii</span>. All rights reserved.</span>
+    <span>Backend Software Engineer · Egypt</span>
+  </footer>
+
+</body>
+
+</html>
