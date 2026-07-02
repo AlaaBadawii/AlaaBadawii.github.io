@@ -335,6 +335,102 @@ section {
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
 }
 
+#experience {
+  background: var(--bg2);
+}
+
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.exp-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.8rem 2rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.exp-card:hover {
+  border-color: rgba(124, 58, 237, 0.35);
+  transform: translateY(-2px);
+}
+
+.exp-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.9rem;
+}
+
+.exp-org {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.exp-org-mark {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: var(--grad);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.exp-role {
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+
+.exp-hourly {
+  color: var(--muted);
+  font-weight: 400;
+  font-size: 0.85rem;
+}
+
+.exp-company {
+  color: var(--muted);
+  font-size: 0.82rem;
+  margin-top: 0.1rem;
+}
+
+.exp-status {
+  flex-shrink: 0;
+  font-size: 0.72rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.exp-status.active {
+  background: rgba(74, 222, 128, 0.1);
+  border: 1px solid rgba(74, 222, 128, 0.25);
+  color: #4ade80;
+}
+
+.exp-status.upcoming {
+  background: rgba(251, 191, 36, 0.1);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  color: #fbbf24;
+}
+
+.exp-desc {
+  color: var(--muted);
+  font-size: 0.87rem;
+  line-height: 1.75;
+}
+
 #skills {
   background: var(--bg);
 }
@@ -466,8 +562,8 @@ section {
   margin-bottom: 0.7rem;
 }
 
-.approach-sub-title + .approach-sub-title,
-.approach-sub-text + .approach-sub-title,
+.approach-sub-title+.approach-sub-title,
+.approach-sub-text+.approach-sub-title,
 .approach-sub-title-spaced {
   margin-top: 2rem;
 }
@@ -645,6 +741,132 @@ section {
   transform: translateY(-1px);
 }
 
+#quizey {
+  background: var(--bg);
+}
+
+.quizey-status {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.quizey-status-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.4rem;
+  background: var(--grad-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.quizey-status-label {
+  color: var(--muted);
+  font-size: 0.8rem;
+  margin-top: -4px;
+}
+
+.quizey-intro {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.85;
+  max-width: 780px;
+  margin-bottom: 3rem;
+}
+
+.quizey-phases {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.quizey-phase {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--border);
+  border-radius: 10px;
+  padding: 1.6rem 1.9rem;
+  transition: border-color 0.2s;
+}
+
+.quizey-phase:hover {
+  border-color: rgba(124, 58, 237, 0.3);
+  border-left-color: var(--purple);
+}
+
+.quizey-phase-active {
+  border-left-color: var(--cyan);
+  background: rgba(34, 211, 238, 0.04);
+}
+
+.quizey-phase-active:hover {
+  border-left-color: var(--cyan);
+}
+
+.quizey-phase-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.7rem;
+}
+
+.quizey-phase-title {
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+
+.quizey-phase-tag {
+  flex-shrink: 0;
+  font-size: 0.68rem;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  padding: 0.22rem 0.65rem;
+  border-radius: 999px;
+}
+
+.quizey-phase-tag.doing {
+  background: rgba(34, 211, 238, 0.1);
+  border: 1px solid rgba(34, 211, 238, 0.3);
+  color: var(--cyan);
+}
+
+.quizey-phase-tag.next {
+  background: rgba(124, 58, 237, 0.12);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  color: #a78bfa;
+}
+
+.quizey-phase-tag.future {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.quizey-phase-text {
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.quizey-phase-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.quizey-rule {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-style: italic;
+  line-height: 1.75;
+  max-width: 700px;
+}
+
 #collab {
   background: var(--bg2);
   padding: 0;
@@ -798,10 +1020,52 @@ section {
   background: var(--bg2);
 }
 
-.certs-grid {
+.certs-grid,
+.certs-featured {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.2rem;
+}
+
+.certs-more-label {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.certs-more {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.cert-pill {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.7rem 1rem;
+  transition: border-color 0.2s;
+}
+
+.cert-pill:hover {
+  border-color: rgba(124, 58, 237, 0.35);
+}
+
+.cert-pill-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.cert-pill-org {
+  font-size: 0.74rem;
+  color: var(--muted);
 }
 
 .cert-card {
@@ -857,6 +1121,114 @@ section {
   background: rgba(251, 191, 36, 0.1);
   border-color: rgba(251, 191, 36, 0.3);
   color: #fbbf24;
+}
+
+.growing-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.growing-item {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.65rem 1rem;
+}
+
+.growing-tag {
+  flex-shrink: 0;
+  font-size: 0.68rem;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.growing-tag.learning {
+  background: rgba(251, 191, 36, 0.1);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  color: #fbbf24;
+}
+
+.growing-tag.reading {
+  background: rgba(124, 58, 237, 0.12);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  color: #a78bfa;
+}
+
+.growing-tag.next {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.growing-text {
+  font-size: 0.85rem;
+  color: var(--white);
+}
+
+#vision {
+  background: var(--bg2);
+}
+
+.vision-intro {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.85;
+  max-width: 780px;
+  margin-bottom: 3rem;
+}
+
+.vision-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.vision-card {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.vision-card:hover {
+  border-color: rgba(124, 58, 237, 0.4);
+  transform: translateY(-4px);
+}
+
+.vision-card-icon {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.vision-card-title {
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+}
+
+.vision-card-text {
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.75;
+}
+
+.vision-quote {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  color: var(--white);
+  font-size: 1.05rem;
+  font-style: italic;
+  line-height: 1.7;
+  max-width: 760px;
 }
 
 #contact {
@@ -1030,6 +1402,7 @@ footer {
 }
 
 @media (max-width: 900px) {
+
   .collab-wrap,
   .problem-wrap {
     grid-template-columns: 1fr;
@@ -1057,11 +1430,26 @@ footer {
 }
 
 @media (max-width: 768px) {
+
   .about-grid,
   .skills-grid,
   .projects-grid,
-  .certs-grid {
+  .certs-grid,
+  .certs-featured,
+  .vision-grid {
     grid-template-columns: 1fr;
+  }
+
+  .growing-item {
+    align-items: flex-start;
+  }
+
+  .exp-card-top {
+    align-items: flex-start;
+  }
+
+  .quizey-status {
+    gap: 2rem;
   }
 
   nav {
