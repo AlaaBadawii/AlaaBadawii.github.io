@@ -1027,6 +1027,15 @@ section {
   gap: 1.2rem;
 }
 
+.certs-sub-label {
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--cyan);
+  font-weight: 600;
+}
+
 .certs-more-label {
   margin-top: 2.5rem;
   margin-bottom: 1rem;
