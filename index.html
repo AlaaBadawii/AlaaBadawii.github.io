@@ -104,20 +104,6 @@
     <div class="exp-card">
       <div class="exp-card-top">
         <div class="exp-org">
-          <div class="exp-org-mark">FR</div>
-          <div>
-            <div class="exp-role">Backend AI Engineering Intern</div>
-            <div class="exp-company">FlyRank</div>
-          </div>
-        </div>
-        <span class="exp-status upcoming">Starting Jul 6, 2026</span>
-      </div>
-      <p class="exp-desc">Joining the engineering team as a Backend AI Engineering intern. Onboarding begins next Monday — this section will be updated with real scope, stack, and responsibilities once the internship starts.</p>
-    </div>
-
-    <div class="exp-card">
-      <div class="exp-card-top">
-        <div class="exp-org">
           <div class="exp-org-mark">AL</div>
           <div>
             <div class="exp-role">Code Reviewer <span class="exp-hourly">· Hourly</span></div>
@@ -228,8 +214,8 @@
     <div class="project-card">
       <span class="project-badge active">In Progress · See case study below</span>
       <div class="project-title">Quizey V2 - AI-Assisted Exam &amp; Training Platform</div>
-      <p class="project-desc">Extending Quizey V1 with a copy-on-write versioning engine, 150+ passing tests, and a production-style Flask architecture — building toward AI-powered progress analysis, a parent dashboard, and containerized deployment.</p>
-      <div class="project-stack"><span class="tag purple">AI</span><span class="tag cyan">Docker</span><span class="tag">PostgreSQL</span><span class="tag">Security</span><span class="tag">FastAPI</span></div>
+      <p class="project-desc">A platform that doesn't just test what people know — it helps them improve. Phase 1 complete: 174 tests, production-grade architecture, and a clear vision. Exams are the mechanism; continuous, measurable learning improvement is the product.</p>
+      <div class="project-stack"><span class="tag purple">AI</span><span class="tag cyan">Docker</span><span class="tag">SQLAlchemy</span><span class="tag">Security</span><span class="tag">Flask</span></div>
       <div class="project-actions">
         <a href="#quizey" class="project-link">View Case Study</a>
       </div>
@@ -244,92 +230,70 @@
 
   <div class="quizey-status">
     <div class="quizey-status-item">
-      <div class="quizey-status-num">152</div>
+      <div class="quizey-status-num">174</div>
       <div class="quizey-status-label">Tests passing</div>
     </div>
     <div class="quizey-status-item">
-      <div class="quizey-status-num">Day 7</div>
-      <div class="quizey-status-label">of Foundation Week</div>
+      <div class="quizey-status-num">Phase 1</div>
+      <div class="quizey-status-label">✅ Complete</div>
     </div>
     <div class="quizey-status-item">
-      <div class="quizey-status-num">1 / 4</div>
-      <div class="quizey-status-label">Phases underway</div>
+      <div class="quizey-status-num">3</div>
+      <div class="quizey-status-label">Phases ahead</div>
     </div>
   </div>
 
-  <p class="quizey-intro">Quizey V2 is a Flask-based exam platform built with production-style architecture: copy-on-write exam versioning, JWT auth, layered services, and a full test suite driving every feature. Right now I'm on Day 7 — the final day of Foundation Week — implementing student attempts and auto-grading, then running a full manual pass through every endpoint in Postman before the Week 1 code is committed and pushed.</p>
+  <p class="quizey-intro">Quizey started from a conviction: exams should do more than measure — they should improve learning. It's a platform where teachers create assessments, students get instant feedback, and organizations see real performance patterns. The product isn't exams — it's <strong>continuous, measurable learning improvement</strong>. I'm building it with production-grade architecture because tools that shape how people learn deserve to be built right.</p>
 
   <div class="quizey-phases">
 
     <div class="quizey-phase quizey-phase-active">
       <div class="quizey-phase-head">
-        <span class="quizey-phase-tag doing">In progress</span>
-        <div class="quizey-phase-title">Phase 1 — Foundation Week</div>
+        <span class="quizey-phase-tag doing">Complete</span>
+        <div class="quizey-phase-title">Phase 1 — Foundation</div>
       </div>
-      <p class="quizey-phase-text">Project structure, database design, authentication, and the first core APIs. Days 1–6 shipped a 6-table ERD, full SQLAlchemy models, a JWT auth system, and a copy-on-write exam versioning engine — 152 tests passing. Day 7 (in progress) adds student attempts and auto-grading, followed by a full Postman pass across every Phase 1 endpoint before pushing to GitHub.</p>
+      <p class="quizey-phase-text">The core loop works end-to-end: create exams, publish them, take them, get graded. Copy-on-write versioning keeps published exams immutable. JWT auth secures every endpoint. 174 tests verify the entire system. This is the solid foundation everything else will build on.</p>
       <div class="quizey-phase-tags">
-        <span class="tag purple">Flask</span><span class="tag cyan">SQLAlchemy</span><span class="tag">JWT Auth</span><span class="tag">Copy-on-Write Versioning</span><span class="tag">152 Tests</span>
+        <span class="tag purple">Flask</span><span class="tag cyan">SQLAlchemy</span><span class="tag">JWT Auth</span><span class="tag">Copy-on-Write</span><span class="tag">174 Tests</span>
       </div>
     </div>
 
     <div class="quizey-phase">
       <div class="quizey-phase-head">
-        <span class="quizey-phase-tag next">Planned — Week 2</span>
-        <div class="quizey-phase-title">Phase 2 — Production Readiness</div>
+        <span class="quizey-phase-tag next">In progress — Next</span>
+        <div class="quizey-phase-title">Phase 2 — Production Platform</div>
       </div>
-      <p class="quizey-phase-text">Hardening the architecture: a Marshmallow or Pydantic validation layer, custom exceptions and a unified error/response formatter, structured logging with request tracking, pagination for exams and attempts, and ownership-based permissions.</p>
+      <p class="quizey-phase-text">Taking the foundation to production grade — the reliability, rich features, and tooling that real organizations need to trust their assessments.</p>
       <div class="quizey-phase-tags">
-        <span class="tag">Validation Layer</span><span class="tag">Error Handling</span><span class="tag">Logging</span><span class="tag">Pagination</span><span class="tag">Permissions</span>
+        <span class="tag">Scale</span><span class="tag">Reliability</span><span class="tag">Features</span><span class="tag">Integrity</span>
       </div>
     </div>
 
     <div class="quizey-phase">
       <div class="quizey-phase-head">
-        <span class="quizey-phase-tag next">Planned — Week 3</span>
-        <div class="quizey-phase-title">Phase 2 — Platform Features</div>
+        <span class="quizey-phase-tag future">Planned</span>
+        <div class="quizey-phase-title">Phase 3 — AI-Native Learning</div>
       </div>
-      <p class="quizey-phase-text">Public, private, and link-based exam publishing, optional exam timers, attempt limits, and detailed results showing correct answers, wrong answers, and final score.</p>
+      <p class="quizey-phase-text">Intelligent question generation, personalized feedback, and adaptive learning paths — powered by Phase 2's clean data and stable infrastructure.</p>
       <div class="quizey-phase-tags">
-        <span class="tag">Exam Publishing</span><span class="tag">Exam Timer</span><span class="tag">Attempt Limits</span><span class="tag">Result Details</span>
+        <span class="tag purple">AI</span><span class="tag cyan">Personalization</span><span class="tag">Analytics</span>
       </div>
     </div>
 
     <div class="quizey-phase">
       <div class="quizey-phase-head">
-        <span class="quizey-phase-tag next">Planned — Week 4</span>
-        <div class="quizey-phase-title">Phase 2 — DevOps &amp; Deployment</div>
-      </div>
-      <p class="quizey-phase-text">Containerizing the backend with Docker, a basic GitHub Actions CI pipeline for linting and tests, deploying to Render or Railway, and eventually migrating from MySQL to PostgreSQL in production.</p>
-      <div class="quizey-phase-tags">
-        <span class="tag">Docker</span><span class="tag">GitHub Actions</span><span class="tag">Render / Railway</span><span class="tag">PostgreSQL</span>
-      </div>
-    </div>
-
-    <div class="quizey-phase">
-      <div class="quizey-phase-head">
-        <span class="quizey-phase-tag future">Planned — After MVP</span>
-        <div class="quizey-phase-title">Phase 3 — AI Integration</div>
-      </div>
-      <p class="quizey-phase-text">AI belongs after the foundation is solid, not before. Once the MVP is live: AI-generated questions from a topic and difficulty level, post-exam feedback highlighting weak topics and study recommendations, and teacher-facing insights on hardest questions and topic performance.</p>
-      <div class="quizey-phase-tags">
-        <span class="tag purple">AI Question Generation</span><span class="tag cyan">AI Feedback</span><span class="tag">Exam Insights</span>
-      </div>
-    </div>
-
-    <div class="quizey-phase">
-      <div class="quizey-phase-head">
-        <span class="quizey-phase-tag future">Planned — At scale</span>
+        <span class="quizey-phase-tag future">Planned</span>
         <div class="quizey-phase-title">Phase 4 — Scale Architecture</div>
       </div>
-      <p class="quizey-phase-text">Only after real usage: async processing, queues, caching, microservices, WebSocket support, and event-driven architecture.</p>
+      <p class="quizey-phase-text">The infrastructure for growth: async processing, caching, and event-driven design — only when real usage demands it.</p>
       <div class="quizey-phase-tags">
-        <span class="tag">Async</span><span class="tag">Queues</span><span class="tag">Caching</span><span class="tag">Microservices</span><span class="tag">Event-Driven</span>
+        <span class="tag">Async</span><span class="tag">Caching</span><span class="tag">Event-Driven</span>
       </div>
     </div>
 
   </div>
 
-  <p class="quizey-rule">"Build boring before building impressive." Authentication, the database, grading, and validation come first — that's what makes the AI features valuable later.</p>
+  <p class="quizey-rule">My philosophy: build boring before building impressive. The foundation, the data model, the integrity layer — that's what makes the intelligent features valuable later, not the other way around.</p>
 </section>
 
 <section id="collab">
@@ -429,15 +393,32 @@
   <div class="section-divider"></div>
 
   <div class="certs-featured">
-    <div class="cert-card"><div class="cert-icon">🎓</div><div><div class="cert-name">ALX Software Engineering Program</div><div class="cert-org">Backend Specialization · ALX Africa · 09/2023 – 10/2024</div></div><span class="cert-status">Completed</span></div>
+        <div class="cert-card">
+          <div class="cert-icon">🎓</div>
+          <div>
+            <div class="cert-name">B.Sc. Management Information Systems</div>
+            <div class="cert-org">Modern Academy · 10/2019 – 07/2023</div>
+          </div><span class="cert-status">Education</span>
+        </div>
+            <div class="cert-card">
+              <div class="cert-icon">🎓</div>
+              <div>
+                <div class="cert-name">ALX Software Engineering Program</div>
+                <div class="cert-org">Backend Specialization · ALX Africa · 09/2023 – 10/2024</div>
+              </div><span class="cert-status">Completed</span>
+            </div>
+  </div>
+
+  <div class="certs-featured">
     <div class="cert-card"><div class="cert-icon">🌟</div><div><div class="cert-name">ALX Professional Foundations</div><div class="cert-org">ALX Africa · Issued May 2026</div></div><span class="cert-status">Completed</span></div>
     <div class="cert-card"><div class="cert-icon">🔧</div><div><div class="cert-name">System Design &amp; Architecture Certificate</div><div class="cert-org">Manara · Issued Mar 2026</div></div><span class="cert-status">Completed</span></div>
     <div class="cert-card"><div class="cert-icon">⚡</div><div><div class="cert-name">Node.js Backend Development Program</div><div class="cert-org">Manara · Issued Apr 2026</div></div><span class="cert-status">Completed</span></div>
-    <div class="cert-card"><div class="cert-icon">☁️</div><div><div class="cert-name">DevOps Program</div><div class="cert-org">Manara · In Progress</div></div><span class="cert-status progress">In Progress</span></div>
+    <div class="cert-card"><div class="cert-icon">☁️</div><div><div class="cert-name">DevOps Program</div><div class="cert-org">Manara · Issued Jun 2026</div></div><span class="cert-status progress">Completed</span></div>
     <div class="cert-card"><div class="cert-icon">🤖</div><div><div class="cert-name">AI Agents and Agentic AI Architecture in Python</div><div class="cert-org">Vanderbilt University · Issued Jul 2026</div></div><span class="cert-status">Completed</span></div>
     <div class="cert-card"><div class="cert-icon">🧠</div><div><div class="cert-name">AI Agents and Agentic AI with Python &amp; Generative AI</div><div class="cert-org">Vanderbilt University · Issued Jun 2026</div></div><span class="cert-status">Completed</span></div>
     <div class="cert-card"><div class="cert-icon">🏅</div><div><div class="cert-name">AiCE — AI Career Essentials</div><div class="cert-org">ALX Africa · Issued Apr 2026</div></div><span class="cert-status">Completed</span></div>
-    <div class="cert-card"><div class="cert-icon">🎓</div><div><div class="cert-name">B.Sc. Management Information Systems</div><div class="cert-org">Modern Academy · 10/2019 – 07/2023</div></div><span class="cert-status">Education</span></div>
+    <div class="cert-card"><div class="cert-icon">☁️</div><div><div class="cert-name">Practical DevOps Bootcamp for All</div><div class="cert-org">Packt · In Progress</div></div><span class="cert-status">In Progress</span></div>
+    <div class="cert-card"><div class="cert-icon">🤖</div><div><div class="cert-name">IBM RAG and Agentic AI</div><div class="cert-org">IBM · In Progress</div></div><span class="cert-status">In Progress</span></div>
   </div>
 
   <div class="certs-more-label">Additional certificates</div>
@@ -445,8 +426,7 @@
     <div class="cert-pill"><span class="cert-pill-name">McKinsey Forward Program</span><span class="cert-pill-org">McKinsey &amp; Company · Jul 2026</span></div>
     <div class="cert-pill"><span class="cert-pill-name">Speak English Professionally</span><span class="cert-pill-org">Georgia Institute of Technology · Jun 2026</span></div>
     <div class="cert-pill"><span class="cert-pill-name">PyMongo — Advanced</span><span class="cert-pill-org">EDUCBA · Jun 2026</span></div>
-    <div class="cert-pill"><span class="cert-pill-name">PyMongo — Beginners</span><span class="cert-pill-org">EDUCBA · Jun 2026</span></div>
-    <div class="cert-pill"><span class="cert-pill-name">Build with AI: Masr Edition</span><span class="cert-pill-org">Information Technology Institute (ITI)</span></div>
+    <div class="cert-pill"><span class="cert-pill-name">Build with AI: Masr Edition</span><span class="cert-pill-org">ITI & Google</span></div>
   </div>
 
   <div class="certs-more-label">Currently growing</div>
