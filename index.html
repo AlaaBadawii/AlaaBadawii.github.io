@@ -23,6 +23,25 @@
     href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="index.css">
+  <noscript>
+    <style>
+      .log-filters {
+        display: none;
+      }
+
+      .mind-controls {
+        display: none;
+      }
+
+      .qphase-tabs {
+        display: none;
+      }
+
+      .quizey-phase[hidden] {
+        display: block !important;
+      }
+    </style>
+  </noscript>
 </head>
 
 <body>
@@ -37,11 +56,12 @@
     </button>
     <ul class="nav-links" id="nav-links">
       <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#approach">Approach</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#signature">Engineering</a></li>
       <li><a href="#quizey">Quizey</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#collab">Values</a></li>
       <li><a href="#certs">Certificates</a></li>
       <li><a href="#vision">Vision</a></li>
@@ -65,18 +85,11 @@
       </div>
       <div class="hero-cta">
         <a href="assets/Alaa_Badawii_Software_AI_Engineer.pdf" class="btn-primary" target="_blank"
-          rel="noopener noreferrer" download>Download AI &amp; SWE Resume</a>
-        <a href="assets/AlaaBadawii_Backend_SWE.pdf" class="btn-outline" target="_blank"
-          rel="noopener noreferrer" download>Download Backend Resume</a>
+          rel="noopener noreferrer" download>Download Resume</a>
+        <a href="https://github.com/AlaaBadawii" class="btn-outline" target="_blank"
+          rel="noopener noreferrer">GitHub</a>
       </div>
       <div class="hero-contacts">
-        <a href="https://github.com/AlaaBadawii/" target="_blank" rel="noopener">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-          </svg>
-          GitHub
-        </a>
         <a href="https://www.linkedin.com/in/alaabadawii/" target="_blank" rel="noopener">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
             <path
@@ -102,6 +115,30 @@
         </a>
       </div>
     </div>
+    <aside class="hero-companion" aria-label="Abu Prompt, grounded knowledge companion">
+      <div class="abu-stage abu-stage-hero">
+        <img class="abu-stage-img active" src="images/abu/abu-wave.jpg"
+          alt="Abu Prompt, a 3D character avatar, waving a welcome">
+      </div>
+      <p class="abu-badge"><span class="abu-badge-dot" aria-hidden="true">&#9679;</span> Abu Prompt //
+        Grounded Knowledge Companion</p>
+      <p class="abu-intro-copy">Hi, I'm Abu Prompt&mdash;born as Alaa's autonomous RAG branding agent
+        (<code>PersonalBrandingAgent</code>), now guiding you through his engineering portfolio.</p>
+      <div class="abu-chips" role="group" aria-label="Quick questions for Abu Prompt">
+        <button type="button" class="abu-chip"
+          data-abu-ask="How are you (Abu Prompt) architected?" aria-haspopup="dialog" aria-controls="abu-drawer"
+          aria-expanded="false">How are you (Abu Prompt) architected?</button>
+        <button type="button" class="abu-chip"
+          data-abu-ask="How did Alaa achieve 130/130 RAG citations?" aria-haspopup="dialog"
+          aria-controls="abu-drawer" aria-expanded="false">How did Alaa achieve 130/130 RAG
+          citations?</button>
+        <button type="button" class="abu-chip" data-abu-ask="What makes Quizey concurrency-safe?"
+          aria-haspopup="dialog" aria-controls="abu-drawer" aria-expanded="false">What makes
+          Quizey concurrency-safe?</button>
+      </div>
+      <button type="button" class="btn-primary abu-cta" data-abu-open aria-haspopup="dialog"
+        aria-controls="abu-drawer" aria-expanded="false">Ask Abu Prompt &rarr;</button>
+    </aside>
     <div class="hero-flower">
       <svg class="flower-svg" viewBox="0 0 200 200" fill="none">
         <ellipse cx="100" cy="55" rx="38" ry="55" fill="#7c3aed" opacity="0.6" transform="rotate(0 100 100)" />
@@ -130,13 +167,34 @@
     <div class="section-divider"></div>
     <div class="about-grid">
       <div class="about-text">
-        <p>I am a Software &amp; AI Engineer focused on building reliable AI-powered applications and end-to-end
-          software systems using Python. My work sits at the intersection of applied AI (Hybrid RAG pipelines,
-          LangGraph/CrewAI agentic workflows, deterministic citation validation) and rigorous backend engineering
-          (FastAPI, Flask, relational database modeling, RBAC, idempotency, and concurrency-safe transactions).</p>
-        <p>Whether leading a 5-person AI engineering team to deliver clinical RAG systems with 100% grounded citations
-          or architecting assessment platforms backed by 1,100+ automated tests, I focus on shipping systems that are
-          measurable, testable, and reliable in production.</p>
+        <p>Hi, I'm Alaa Badawii — a software and AI engineer passionate about building reliable AI-powered products.
+          I combine software engineering and AI to build complete applications: backend systems, databases, APIs,
+          and AI capabilities, working together. I care about the bigger picture — how everything should fit, and
+          making sure the final product is reliable, useful, and valuable to its users.</p>
+        <p>For me, building AI products isn't just about making the AI work — it's about building the whole product
+          around it, with the right checks and safeguards to protect users, earn their trust, and deliver tangible
+          value.</p>
+        <p>Recently I led a five-person team at the Creativa AI Hackathon, where we built a clinical RAG system on
+          the NICE NG217 guideline — working across system architecture, the FastAPI backend, hybrid retrieval,
+          cross-encoder reranking, LLM generation, and evaluation — reaching 85% Precision@1, 87.9% MRR, and
+          130/130 traceable citations. My foundation comes from the ALX Software Engineering Program: nine months
+          of full-stack training followed by three months of backend specialization, applied since through
+          independent projects like Quizey, the AI-first assessment platform I'm currently developing.</p>
+        <p>I'm most drawn to RAG systems, AI agents, multi-agent workflows, AI application reliability, and backend
+          architecture — products where software engineering and AI work together to create something distinctive.
+          I'm always happy to connect with fellow engineers and people building interesting products.</p>
+        <div class="about-interests">
+          <div class="about-interests-label">Areas of interest</div>
+          <div class="about-interests-tags">
+            <span class="tag">Software Engineering</span>
+            <span class="tag">AI Engineering</span>
+            <span class="tag">Python</span>
+            <span class="tag">RAG</span>
+            <span class="tag">Agentic Systems</span>
+            <span class="tag">Backend Architecture</span>
+            <span class="tag">AI Reliability</span>
+          </div>
+        </div>
         <div class="about-stats">
           <div class="stat-item">
             <div class="stat-num">1,100+</div>
@@ -153,55 +211,6 @@
         </div>
       </div>
       <div class="about-photo" aria-label="Developer workspace photo"></div>
-    </div>
-  </section>
-
-  <section id="experience">
-    <p class="section-label">Where I've worked</p>
-    <div class="section-title"><span class="grad">Experience</span> Timeline</div>
-    <div class="section-divider"></div>
-    <div class="exp-list">
-
-      <div class="exp-card">
-        <div class="exp-card-top">
-          <div class="exp-org">
-            <div class="exp-org-mark">CR</div>
-            <div>
-              <div class="exp-role">Team Lead (Team of 5) — Clinical RAG Hackathon Project</div>
-              <div class="exp-company">Creativa AI Hackathon · Banha, Egypt</div>
-            </div>
-          </div>
-          <span class="exp-status neutral">Aug 2026</span>
-        </div>
-        <ul class="exp-points">
-          <li>Led a 5-person cross-functional team during an intensive 40+ hour hackathon, coordinating backend, data
-            engineering, and frontend delivery of a clinical RAG system for NICE NG217.</li>
-          <li>Directed technical architecture and hybrid retrieval optimizations, driving an 85% Precision@1 and 100%
-            citation groundedness result.</li>
-        </ul>
-      </div>
-
-      <div class="exp-card">
-        <div class="exp-card-top">
-          <div class="exp-org">
-            <div class="exp-org-mark">AL</div>
-            <div>
-              <div class="exp-role">Backend Engineering Trainee</div>
-              <div class="exp-company">ALX Africa · Remote</div>
-            </div>
-          </div>
-          <span class="exp-status neutral">Aug 2023 – Sep 2024</span>
-        </div>
-        <ul class="exp-points">
-          <li>Completed ALX's intensive 12-month Software Engineering programme, progressing through Foundations and
-            the Backend Engineering specialization.</li>
-          <li>Engineered backend applications using Python, Flask, SQLAlchemy, MySQL, REST APIs, authentication, Redis
-            caching, and automated test suites.</li>
-          <li>Applied production software engineering practices in relational database design, Linux system
-            administration, Git workflows, debugging, and application architecture.</li>
-        </ul>
-      </div>
-
     </div>
   </section>
 
@@ -383,108 +392,237 @@
       </div>
     </div>
 
-    <div class="certs-more-label">More projects &amp; engineering</div>
-    <div class="support-grid">
-      <div class="support-card">
-        <span class="project-badge flagship">Agentic AI</span>
-        <div class="support-title">AI Agents From Scratch</div>
-        <p class="support-desc">Framework-free AI agents built from first principles: a GAME-style agent loop,
-          decorator-based tool registry, OpenAI-style tool-call protocol, multi-turn memory, explicit termination, and
-          orchestrator routing to specialized agents. Multi_Agents validates LLM output with deterministic Python
-          before accepting it. Docker support included; a Judge/Critic evaluation engine is still in progress.</p>
-        <div class="support-stack"><span class="tag purple">Agent Loops</span><span class="tag cyan">Tool
-            Calling</span><span class="tag">Multi-Agent</span><span class="tag">LiteLLM</span><span
-            class="tag">Docker</span></div>
-        <div class="support-actions">
-          <a href="https://github.com/AlaaBadawii/AI-Agents" target="_blank" rel="noopener"
-            class="project-link">GitHub</a>
+    <p class="projects-explore">More repositories, labs, and experiments live on
+      <a href="https://github.com/AlaaBadawii?tab=repositories" target="_blank" rel="noopener">GitHub →</a></p>
+  </section>
+
+  <section id="signature">
+    <div class="sig-glow" aria-hidden="true"></div>
+    <p class="section-label">Signature experience</p>
+    <div class="section-title">The Engineering <span class="grad">Behind the Intelligence</span></div>
+    <div class="section-divider"></div>
+
+    <div class="sig-framing">
+      <p class="sig-framing-quote">Making AI work is only the beginning. Making the whole system work reliably is
+        the real engineering.</p>
+      <p class="sig-framing-sub">I care about what happens before, during, and after the AI generates an answer. The
+        goal isn't just to make it work&mdash;it's to make it worth relying on.</p>
+      <ol class="sig-ribbon" aria-label="Four-stage engineering pipeline">
+        <li class="sig-ribbon-step"><span class="sig-ribbon-num" aria-hidden="true">01</span> &middot;
+          Intelligence</li>
+        <li class="sig-ribbon-step"><span class="sig-ribbon-num" aria-hidden="true">02</span> &middot;
+          Architecture</li>
+        <li class="sig-ribbon-step"><span class="sig-ribbon-num" aria-hidden="true">03</span> &middot;
+          Reliability</li>
+        <li class="sig-ribbon-step"><span class="sig-ribbon-num" aria-hidden="true">04</span> &middot; Real
+          Value</li>
+      </ol>
+    </div>
+
+    <p class="sig-intro">Three connected chapters: the principles I design by, an interactive walkthrough of how I
+      make engineering decisions under real constraints, and a running log of how those decisions played out on
+      actual projects.</p>
+
+    <nav class="sig-nav" aria-label="Signature experience chapters">
+      <a href="#philosophy" class="sig-nav-link" data-chapter="philosophy"><span class="sig-nav-num">01</span>
+        Engineering Philosophy</a>
+      <a href="#mind" class="sig-nav-link" data-chapter="mind"><span class="sig-nav-num">02</span> Inside My
+        Engineering Mind</a>
+      <a href="#log" class="sig-nav-link" data-chapter="log"><span class="sig-nav-num">03</span> The Builder's
+        Log</a>
+    </nav>
+
+    <!-- ============ Chapter 01: Engineering Philosophy ============ -->
+    <div class="sig-chapter" id="philosophy">
+      <div class="sig-chapter-head">
+        <div class="sig-chapter-num" aria-hidden="true">01</div>
+        <div>
+          <div class="sig-chapter-title">Engineering Philosophy</div>
+          <p class="sig-chapter-sub">The principles behind every system I ship.</p>
         </div>
       </div>
-      <div class="support-card">
-        <span class="project-badge flagship">Applied AI &amp; RAG</span>
-        <div class="support-title">IBM RAG &amp; Agentic AI — Hands-on Progress</div>
-        <p class="support-desc">Working through IBM's RAG and Agentic AI Professional Certificate with independently
-          rebuilt hands-on projects — 7 of 10 courses completed. Includes LangChain/LCEL structured-output apps,
-          LlamaIndex RAG with local embeddings and Chroma, Gradio interfaces, and a Personal Branding Agent with
-          LinkedIn OAuth.</p>
-        <div class="support-stack"><span class="tag purple">LangChain</span><span class="tag cyan">LlamaIndex</span><span
-            class="tag">Chroma</span><span class="tag">Pydantic</span><span class="tag">Gradio</span><span
-            class="tag">OpenRouter</span><span class="tag">RAG</span></div>
-        <div class="support-actions">
-          <a href="https://github.com/AlaaBadawii/IBM-RAG-Agentic-AI" target="_blank" rel="noopener"
-            class="project-link">GitHub</a>
-        </div>
-      </div>
-      <div class="support-card">
-        <span class="project-badge support">Supporting · Backend</span>
-        <div class="support-title">Quizey V1 - Exam Platform Backend</div>
-        <p class="support-desc">Versioned Flask REST API with JWT auth, email verification, password reset, question
-          banks, and attempt evaluation on PostgreSQL with Alembic-powered schema evolution.</p>
-        <div class="support-stack"><span class="tag purple">Flask</span><span class="tag cyan">PostgreSQL</span><span
-            class="tag">SQLAlchemy</span><span class="tag">Alembic</span></div>
-        <div class="support-actions">
-          <a href="https://github.com/AlaaBadawii/Quizey" target="_blank" class="project-link">GitHub</a>
-        </div>
-      </div>
-      <div class="support-card">
-        <span class="project-badge support">Supporting · Full-stack</span>
-        <div class="support-title">Taskey - Task Management System</div>
-        <p class="support-desc">Full-stack Flask task management with authentication, task lifecycle tracking,
-          priorities, deadlines, environment-based database configuration, theme persistence, and profile uploads.</p>
-        <div class="support-stack"><span class="tag purple">Flask</span><span class="tag cyan">SQLAlchemy</span><span
-            class="tag">MySQL</span><span class="tag">SQLite</span></div>
-        <div class="support-actions">
-          <a href="https://github.com/AlaaBadawii/Taskey" target="_blank" class="project-link">GitHub</a>
-        </div>
-      </div>
-      <div class="support-card">
-        <span class="project-badge support">Supporting · CI/CD</span>
-        <div class="support-title">jenkins-practice</div>
-        <p class="support-desc">CI/CD practice with a Jenkinsfile and a GitHub Actions workflow that run the Python test
-          suite in a containerized environment.</p>
-        <div class="support-stack"><span class="tag">Docker</span><span class="tag">Jenkins</span><span
-            class="tag">GitHub Actions</span><span class="tag">pytest</span></div>
-        <div class="support-actions">
-          <a href="https://github.com/AlaaBadawii/jenkins-practice" target="_blank" class="project-link">GitHub</a>
-        </div>
-      </div>
-      <div class="support-card">
-        <span class="project-badge support">Supporting · DevOps</span>
-        <div class="support-title">devops-lab</div>
-        <p class="support-desc">Docker Compose lab running a Flask app with a MySQL service — environment-based
-          configuration and reproducible container setup.</p>
-        <div class="support-stack"><span class="tag">Docker</span><span class="tag">Docker Compose</span><span
-            class="tag">Flask</span><span class="tag">MySQL</span></div>
-        <div class="support-actions">
-          <a href="https://github.com/AlaaBadawii/devops-lab" target="_blank" class="project-link">GitHub</a>
-        </div>
+      <div class="phil-grid">
+        <article class="phil-card">
+          <div class="phil-num">P1</div>
+          <h3 class="phil-title">Build boring before impressive</h3>
+          <p class="phil-text">The data model, the integrity layer, and the tests come before any intelligent
+            feature. Intelligence built on a shaky foundation is a demo — the boring work is what makes the
+            impressive part survive production.</p>
+        </article>
+        <article class="phil-card">
+          <div class="phil-num">P2</div>
+          <h3 class="phil-title">Deterministic beats hopeful</h3>
+          <p class="phil-text">I don't trust prompts or clients to be correct. Citations are validated
+            deterministically, submissions are guarded by idempotency keys and atomic transactions, and an answer
+            either traces to its sources or it doesn't ship.</p>
+        </article>
+        <article class="phil-card">
+          <div class="phil-num">P3</div>
+          <h3 class="phil-title">Test the failure path</h3>
+          <p class="phil-text">Race conditions, cache outages, expired tokens, failed migrations — that's where
+            systems break. 1,100+ automated tests cover auth, RBAC, concurrency, and data integrity, with
+            fail-closed defaults when a dependency disappears.</p>
+        </article>
+        <article class="phil-card">
+          <div class="phil-num">P4</div>
+          <h3 class="phil-title">Measure, don't demo</h3>
+          <p class="phil-text">A demo proves a system can work once; an evaluation harness proves it keeps working.
+            Retrieval quality (Precision@1, MRR, Recall) and generation quality (Groundedness, Answer Correctness)
+            are measured, not assumed.</p>
+        </article>
+        <article class="phil-card">
+          <div class="phil-num">P5</div>
+          <h3 class="phil-title">Design for the next engineer</h3>
+          <p class="phil-text">Clear module boundaries, explicit interfaces, meaningful names, documented APIs.
+            From Flask blueprints to layered backends, the codebase has to grow without becoming a burden for
+            whoever touches it next.</p>
+        </article>
+        <article class="phil-card">
+          <div class="phil-num">P6</div>
+          <h3 class="phil-title">Own the whole path</h3>
+          <p class="phil-text">Building isn't done until it ships. Docker, CI/CD, Linux, and cloud deployment close
+            the gap between a system that works on my machine and one that stays reliable in production.</p>
+        </article>
       </div>
     </div>
 
-    <div class="certs-more-label">Foundations</div>
-    <div class="support-grid">
-      <div class="support-card">
-        <span class="project-badge hist">Historical · ALX curriculum</span>
-        <div class="support-title">Airbnb Clone - Backend System</div>
-        <p class="support-desc">Modular Flask backend with file and database storage engines, RESTful APIs with
-          validation and error handling, and Jinja2 server-side rendering.</p>
-        <div class="support-stack"><span class="tag purple">Flask</span><span class="tag cyan">SQLAlchemy</span><span
-            class="tag">MySQL</span><span class="tag">Jinja2</span></div>
-        <div class="support-actions">
-          <a href="https://github.com/AlaaBadawii/AirBnB_clone_v4" target="_blank" class="project-link">GitHub</a>
+    <!-- ============ Chapter 02: Inside My Engineering Mind ============ -->
+    <div class="sig-chapter" id="mind">
+      <div class="sig-chapter-head">
+        <div class="sig-chapter-num" aria-hidden="true">02</div>
+        <div>
+          <div class="sig-chapter-title">Inside My Engineering Mind</div>
+          <p class="sig-chapter-sub">Real constraints from real projects. What would you decide?</p>
         </div>
       </div>
-      <div class="support-card">
-        <span class="project-badge hist">Historical · C fundamentals</span>
-        <div class="support-title">Custom printf Implementation</div>
-        <p class="support-desc">Custom C implementation of <code>printf</code> using variadic functions and format-string
-          parsing — pointer arithmetic and low-level output handling for multiple data types.</p>
-        <div class="support-stack"><span class="tag cyan">C</span><span class="tag">Pointers</span><span
-            class="tag">Parsing</span><span class="tag">Low-Level I/O</span></div>
-        <div class="support-actions">
-          <a href="https://github.com/AlaaBadawii/printf" target="_blank" class="project-link">GitHub</a>
+      <div class="mind-controls">
+        <div class="sim-pills" role="group" aria-label="Jump straight to a scenario">
+          <button type="button" class="sim-pill" data-action="jump" data-index="0">01 &middot; Quizey</button>
+          <button type="button" class="sim-pill" data-action="jump" data-index="1">02 &middot; Quizey</button>
+          <button type="button" class="sim-pill" data-action="jump" data-index="2">03 &middot; NG217 RAG</button>
+          <button type="button" class="sim-pill" data-action="jump" data-index="3">04 &middot; NG217 RAG</button>
+          <button type="button" class="sim-pill" data-action="jump" data-index="4">05 &middot; NG217 RAG</button>
+          <button type="button" class="sim-pill" data-action="jump" data-index="5">06 &middot; Abu Prompt</button>
+          <button type="button" class="sim-pill" data-action="jump" data-index="6">07 &middot; Abu Prompt</button>
+        </div>
+        <button type="button" class="btn-outline mind-reveal" data-action="reveal"
+          aria-pressed="false">Reveal Architecture &amp; Trade-offs</button>
+      </div>
+      <div class="sim" id="simulator" role="region" aria-label="Engineering decision simulator">
+        <noscript>
+          <p class="sim-noscript">⚠ This interactive simulator requires JavaScript. The principles it exercises
+            are in Chapter 01, and the outcomes are recorded in The Builder's Log below.</p>
+        </noscript>
+      </div>
+    </div>
+
+    <!-- ============ Chapter 03: The Builder's Log ============ -->
+    <div class="sig-chapter" id="log">
+      <div class="sig-chapter-head">
+        <div class="sig-chapter-num" aria-hidden="true">03</div>
+        <div>
+          <div class="sig-chapter-title">The Builder's Log</div>
+          <p class="sig-chapter-sub">Decisions, trade-offs, and outcomes from the work itself.</p>
         </div>
       </div>
+
+      <div class="log-filters" role="group" aria-label="Filter the builder's log">
+        <button type="button" class="log-filter active" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="log-filter" data-filter="ai" aria-pressed="false">AI &amp; RAG</button>
+        <button type="button" class="log-filter" data-filter="backend" aria-pressed="false">Backend</button>
+        <button type="button" class="log-filter" data-filter="reliability" aria-pressed="false">Reliability</button>
+        <button type="button" class="log-filter" data-filter="learning" aria-pressed="false">Learning</button>
+      </div>
+      <p class="log-count" id="log-count" aria-live="polite">Showing 7 of 7 entries</p>
+
+      <!-- BUILDER'S LOG — to add an entry: copy any <article class="log-entry"> block below,
+           then set data-category (any of: ai backend reliability learning — space-separated),
+           the date, category label, title, text, and outcome. Nothing else needs to change. -->
+      <div class="log-list" id="log-list">
+        <article class="log-entry" data-category="ai">
+          <div class="log-meta"><time class="log-date" datetime="2026-08">Aug 2026</time><span
+              class="log-cat">AI &amp; RAG</span></div>
+          <h3 class="log-title">Leading a team under a 40-hour clock</h3>
+          <p class="log-text">Coordinated a 5-person cross-functional team through an intensive 40+ hour hackathon
+            to ship a clinical RAG system for the NICE NG217 guideline. The pivotal architecture decision: hybrid
+            retrieval — dense vectors fused with BM25 via Reciprocal Rank Fusion and cross-encoder reranking —
+            instead of betting the whole system on a single retrieval method.</p>
+          <div class="log-outcome"><span class="log-outcome-label">Outcome</span> 85% Precision@1 · 87.9% MRR ·
+            130/130 traceable citations</div>
+        </article>
+
+        <article class="log-entry" data-category="backend reliability">
+          <div class="log-meta"><time class="log-date" datetime="2026">2026</time><span
+              class="log-cat">Backend · Reliability</span></div>
+          <h3 class="log-title">The submission that arrived twice</h3>
+          <p class="log-text">When a student clicks submit twice — or a retry fires after a timeout — the exam must
+            be graded exactly once. I placed the guarantee at the database level: database-backed idempotency keys,
+            atomic transactions, and frozen attempt papers, so correctness never depends on the client behaving
+            itself.</p>
+          <div class="log-outcome"><span class="log-outcome-label">Outcome</span> One-time submission guarantee ·
+            race conditions covered in the 1,100+ automated tests</div>
+        </article>
+
+        <article class="log-entry" data-category="backend reliability">
+          <div class="log-meta"><time class="log-date" datetime="2026">2026</time><span
+              class="log-cat">Backend · Reliability</span></div>
+          <h3 class="log-title">Choosing to fail closed</h3>
+          <p class="log-text">JWT revocation lives in Redis. When the cache is unreachable, do you fail open —
+            letting requests through — or fail closed and reject them? We fail closed, with expiration-aware TTLs,
+            because a few rejected requests cost far less than honoring a revoked token.</p>
+          <div class="log-outcome"><span class="log-outcome-label">Outcome</span> Fail-closed security behavior ·
+            cache-outage scenarios are in the test suite</div>
+        </article>
+
+        <article class="log-entry" data-category="ai">
+          <div class="log-meta"><time class="log-date" datetime="2026">2026</time><span
+              class="log-cat">AI &amp; RAG</span></div>
+          <h3 class="log-title">Grounded or nothing</h3>
+          <p class="log-text">A clinical answer that sounds right but cites nothing is worse than no answer. Every
+            generation passes a deterministic citation-validation gate: claims must map back to retrieved sources
+            before the response is allowed to ship.</p>
+          <div class="log-outcome"><span class="log-outcome-label">Outcome</span> 100% grounded responses ·
+            130/130 candidate answers traceable to sources</div>
+        </article>
+
+        <article class="log-entry" data-category="ai reliability">
+          <div class="log-meta"><time class="log-date" datetime="2026">2026</time><span
+              class="log-cat">AI · Reliability</span></div>
+          <h3 class="log-title">Building the measuring stick</h3>
+          <p class="log-text">You can't tune what you don't measure. I built an evaluation harness covering
+            retrieval (Precision@1, MRR, Candidate Recall) and generation (Groundedness, Answer Correctness,
+            LLM-as-a-judge), so every pipeline change is compared against numbers instead of vibes.</p>
+          <div class="log-outcome"><span class="log-outcome-label">Outcome</span> 85% P@1 · 75% Answer
+            Correctness baseline · every change measured against it</div>
+        </article>
+
+        <article class="log-entry" data-category="learning">
+          <div class="log-meta"><time class="log-date" datetime="2023-08/2024-09">Aug 2023 – Sep 2024</time><span
+              class="log-cat">Learning</span></div>
+          <h3 class="log-title">Twelve months at the foundations</h3>
+          <p class="log-text">ALX Africa's Backend Engineering specialization: Flask, SQLAlchemy, MySQL, REST APIs,
+            authentication, Redis caching, and automated test suites — with Linux, Git, and relational database
+            design as daily practice rather than side reading.</p>
+          <div class="log-outcome"><span class="log-outcome-label">Outcome</span> ALX Certified Backend Software
+            Engineer · Sep 2024</div>
+        </article>
+
+        <article class="log-entry" data-category="learning">
+          <div class="log-meta"><time class="log-date" datetime="2026">2026</time><span
+              class="log-cat">Learning</span></div>
+          <h3 class="log-title">Rebuilding RAG by hand</h3>
+          <p class="log-text">Working through the IBM RAG and Agentic AI Professional Certificate — rebuilding each
+            hands-on project independently instead of copy-pasting: LangChain structured outputs, LlamaIndex
+            retrieval with Chroma, and agentic workflows with LangGraph.</p>
+          <div class="log-outcome"><span class="log-outcome-label">Outcome</span> 7 of 10 courses complete ·
+            expected Nov 2026</div>
+        </article>
+      </div>
+    </div>
+
+    <div class="sig-creed">
+      <p class="sig-creed-text">"I don't just build systems that work. I build systems I can explain, test, trust,
+        and improve."</p>
     </div>
   </section>
 
@@ -515,9 +653,19 @@
       machines, database-backed idempotency, fail-closed Redis JWT revocation, and audit integrity come before any
       intelligent feature — all backed by 1,100+ automated tests.</p>
 
+    <div class="qphase-tabs" role="tablist" aria-label="Quizey development phases">
+      <button type="button" class="qphase-tab active" id="qphase-tab-1" role="tab" aria-selected="true"
+        aria-controls="qphase-1" data-phase="1">✅ Phase 1 — Foundation</button>
+      <button type="button" class="qphase-tab" id="qphase-tab-2" role="tab" aria-selected="false"
+        aria-controls="qphase-2" data-phase="2">🔶 Phase 2 — Production</button>
+      <button type="button" class="qphase-tab" id="qphase-tab-3" role="tab" aria-selected="false"
+        aria-controls="qphase-3" data-phase="3">Phase 3 — AI-Native</button>
+    </div>
+
     <div class="quizey-phases">
 
-      <div class="quizey-phase quizey-phase-active">
+      <div class="quizey-phase quizey-phase-active" id="qphase-1" role="tabpanel" aria-labelledby="qphase-tab-1"
+        tabindex="0">
         <div class="quizey-phase-head">
           <span class="quizey-phase-tag doing">Complete</span>
           <div class="quizey-phase-title">Phase 1 — Foundation</div>
@@ -532,7 +680,7 @@
         </div>
       </div>
 
-      <div class="quizey-phase quizey-phase-active">
+      <div class="quizey-phase" id="qphase-2" role="tabpanel" aria-labelledby="qphase-tab-2" tabindex="0" hidden>
         <div class="quizey-phase-head">
           <span class="quizey-phase-tag doing">In progress</span>
           <div class="quizey-phase-title">Phase 2 — Production Platform</div>
@@ -552,7 +700,7 @@
         </div>
       </div>
 
-      <div class="quizey-phase">
+      <div class="quizey-phase" id="qphase-3" role="tabpanel" aria-labelledby="qphase-tab-3" tabindex="0" hidden>
         <div class="quizey-phase-head">
           <span class="quizey-phase-tag future">Planned</span>
           <div class="quizey-phase-title">Phase 3 — AI-Native Learning</div>
@@ -570,6 +718,67 @@
 
     <p class="quizey-rule">My philosophy: build boring before building impressive. The foundation, the data model, the
       integrity layer — that's what makes the intelligent features valuable later, not the other way around.</p>
+  </section>
+
+  <section id="experience">
+    <p class="section-label">Professional development</p>
+    <div class="section-title"><span class="grad">Experience</span> &amp; Growth</div>
+    <div class="section-divider"></div>
+    <p class="exp-intro">Two experiences that shaped how I build: leading delivery under pressure, and a rigorous
+      engineering foundation to grow from.</p>
+    <div class="exp-list">
+
+      <div class="exp-card">
+        <div class="exp-card-top">
+          <div class="exp-org">
+            <div class="exp-org-mark">CR</div>
+            <div>
+              <div class="exp-role">Team Lead (Team of 5) — Clinical RAG Hackathon Project</div>
+              <div class="exp-company">Creativa AI Hackathon · Banha, Egypt</div>
+            </div>
+          </div>
+          <div class="exp-chips">
+            <span class="exp-type">Team leadership</span>
+            <span class="exp-status neutral">Aug 2026</span>
+          </div>
+        </div>
+        <div class="exp-outcome"><span class="exp-outcome-label">Outcome</span> 85% Precision@1 · 87.9% MRR ·
+          100% grounded responses · 130/130 traceable citations</div>
+        <ul class="exp-points">
+          <li>Led a 5-person cross-functional team through an intensive 40+ hour hackathon, coordinating backend,
+            data engineering, and frontend delivery of a clinical RAG system for NICE NG217.</li>
+          <li>Directed the technical architecture and hybrid retrieval optimizations the team shipped — dense +
+            BM25 fusion, reranking, and deterministic citation validation.</li>
+        </ul>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-card-top">
+          <div class="exp-org">
+            <div class="exp-org-mark">AL</div>
+            <div>
+              <div class="exp-role">Backend Engineering Trainee</div>
+              <div class="exp-company">ALX Africa · Remote</div>
+            </div>
+          </div>
+          <div class="exp-chips">
+            <span class="exp-type">Professional training</span>
+            <span class="exp-status neutral">Aug 2023 – Sep 2024</span>
+          </div>
+        </div>
+        <div class="exp-outcome"><span class="exp-outcome-label">Outcome</span> ALX Certified Backend Software
+          Engineer · Sep 2024</div>
+        <ul class="exp-points">
+          <li>Completed ALX's 12-month Software Engineering programme — nine months of full-stack foundations,
+            then three months of backend specialization.</li>
+          <li>Engineered backend applications with Python, Flask, SQLAlchemy, MySQL, REST APIs, authentication,
+            Redis caching, and automated test suites.</li>
+          <li>Applied production practices across relational database design, Linux administration, Git workflows,
+            debugging, and application architecture.</li>
+        </ul>
+      </div>
+
+    </div>
   </section>
 
   <section id="collab">
@@ -781,16 +990,12 @@
     <div class="growing-row">
       <div class="growing-item"><span class="growing-tag learning">Learning</span><span class="growing-text">IBM RAG
           &amp; Agentic AI — remaining certificate courses</span></div>
-      <div class="growing-item"><span class="growing-tag learning">Learning</span><span class="growing-text">AI Agents
-          &amp; Agentic Systems — Judge/Critic evaluation</span></div>
       <div class="growing-item"><span class="growing-tag learning">Learning</span><span class="growing-text">FastAPI
           &amp; Backend Development</span></div>
-      <div class="growing-item"><span class="growing-tag learning">Learning</span><span class="growing-text">DevOps
-          &amp; Kubernetes — Docker, CI/CD, minikube practice</span></div>
-      <div class="growing-item"><span class="growing-tag reading">Reading</span><span
+      <div class="growing-item"><span class="growing-tag learning">Learning</span><span
           class="growing-text">English Communication for Tech Professionals — Arizona State University</span></div>
       <div class="growing-item"><span class="growing-tag next">Up Next</span><span class="growing-text">Production
-          deployment &amp; observability for current projects</span></div>
+          deployment &amp; observability for current projects.</span></div>
     </div>
   </section>
 
@@ -932,6 +1137,57 @@
     <span>Software &amp; AI Engineer · Egypt</span>
   </footer>
 
+  <!-- ============ Abu Prompt — floating launcher + grounded assistant drawer ============ -->
+  <button type="button" class="abu-launcher" id="abu-launcher" data-abu-open aria-haspopup="dialog"
+    aria-controls="abu-drawer" aria-expanded="false">
+    <img class="abu-launcher-avatar" src="images/abu/abu-idle.jpg" alt="">
+    <span class="abu-launcher-label">Ask Abu</span>
+  </button>
+
+  <div class="abu-backdrop" id="abu-backdrop" data-abu-close hidden></div>
+
+  <div class="abu-drawer" id="abu-drawer" role="dialog" aria-modal="true" aria-labelledby="abu-drawer-title"
+    aria-describedby="abu-state-msg" aria-busy="false" tabindex="-1" hidden>
+    <header class="abu-drawer-head">
+      <div class="abu-stage abu-stage-drawer" aria-hidden="true">
+        <img class="abu-stage-img" data-abu-state="greeting" src="images/abu/abu-wave.jpg" alt="" loading="lazy">
+        <img class="abu-stage-img" data-abu-state="idle" src="images/abu/abu-idle.jpg" alt="" loading="lazy">
+        <img class="abu-stage-img" data-abu-state="thinking" src="images/abu/abu-thinking.jpg" alt=""
+          loading="lazy">
+        <img class="abu-stage-img" data-abu-state="explaining" src="images/abu/abu-explaining.jpg" alt=""
+          loading="lazy">
+        <img class="abu-stage-img" data-abu-state="uncertain" src="images/abu/abu-uncertain.jpg" alt=""
+          loading="lazy">
+      </div>
+      <div class="abu-head-meta">
+        <h2 class="abu-head-title" id="abu-drawer-title">Abu Prompt</h2>
+        <p class="abu-head-badge"><span class="abu-badge-dot" aria-hidden="true">&#9679;</span> Grounded
+          Knowledge Companion</p>
+        <p class="abu-state-msg" id="abu-state-msg" role="status" aria-live="polite" aria-atomic="true">Welcome!
+          Ask me about Alaa's projects, architecture decisions, or the original PersonalBrandingAgent RAG +
+          SQLite codebase.</p>
+      </div>
+      <button type="button" class="abu-close" data-abu-close aria-label="Close Abu Prompt companion">&times;</button>
+    </header>
+    <div class="abu-msgs" id="abu-msgs" role="log" aria-live="polite" aria-relevant="additions"></div>
+    <div class="abu-drawer-chips" role="group" aria-label="Quick prompts">
+      <button type="button" class="abu-chip" data-abu-ask="How are you (Abu Prompt) architected?">Abu Prompt
+        architecture</button>
+      <button type="button" class="abu-chip" data-abu-ask="How did Alaa achieve 130/130 RAG citations?">130/130
+        citations</button>
+      <button type="button" class="abu-chip" data-abu-ask="What makes Quizey concurrency-safe?">Quizey
+        concurrency</button>
+    </div>
+    <form class="abu-input-row" id="abu-form" autocomplete="off">
+      <label class="abu-sr-only" for="abu-input">Ask a question about Alaa's portfolio</label>
+      <input class="abu-input" id="abu-input" type="text" aria-describedby="abu-state-msg"
+        placeholder="Ask about projects, architecture, tests…">
+      <button type="submit" class="btn-primary abu-send">Ask</button>
+    </form>
+  </div>
+
+  <script src="signature.js" defer></script>
+  <script src="abu.js" defer></script>
   <script>
     const nav = document.querySelector('nav');
     const navToggle = document.querySelector('.nav-toggle');
@@ -957,6 +1213,25 @@
         }
       });
     }
+
+    const qphaseTabs = document.querySelectorAll('.qphase-tab');
+    const qphasePanels = document.querySelectorAll('.quizey-phase');
+
+    qphaseTabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        const phase = tab.getAttribute('data-phase');
+        qphaseTabs.forEach((t) => {
+          const active = t === tab;
+          t.classList.toggle('active', active);
+          t.setAttribute('aria-selected', String(active));
+        });
+        qphasePanels.forEach((panel) => {
+          const match = panel.id === 'qphase-' + phase;
+          panel.hidden = !match;
+          panel.classList.toggle('quizey-phase-active', match);
+        });
+      });
+    });
   </script>
 
 </body>
