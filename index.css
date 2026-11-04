@@ -203,12 +203,56 @@ section {
 }
 
 .hero-sub {
-  margin-top: 1.5rem;
-  font-size: 1.05rem;
+  margin-top: 1.25rem;
+  font-size: 1.02rem;
   color: var(--muted);
-  max-width: 520px;
+  max-width: 640px;
   line-height: 1.7;
   animation: fadeUp 0.7s ease 0.2s both;
+}
+
+.hero-role {
+  margin-top: 1.1rem;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(1.7rem, 3.5vw, 2.6rem);
+  letter-spacing: 3px;
+  background: var(--grad-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeUp 0.7s ease 0.15s both;
+}
+
+.hero-tagline {
+  margin-top: 0.5rem;
+  font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  color: var(--white);
+  animation: fadeUp 0.7s ease 0.2s both;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+  animation: fadeUp 0.7s ease 0.35s both;
+}
+
+.hero-badge {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  letter-spacing: 0.3px;
+}
+
+.hero-badge-available {
+  background: rgba(74, 222, 128, 0.08);
+  border-color: rgba(74, 222, 128, 0.3);
+  color: #4ade80;
 }
 
 .hero-cta {
@@ -437,7 +481,7 @@ section {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
 
@@ -1627,4 +1671,77 @@ footer {
   .support-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ---- Experience bullet points ---- */
+
+.exp-points {
+  margin: 0.2rem 0 0;
+  padding-left: 1.15rem;
+  color: var(--muted);
+  font-size: 0.87rem;
+  line-height: 1.75;
+}
+
+.exp-points li {
+  margin-bottom: 0.45rem;
+}
+
+.exp-points li:last-child {
+  margin-bottom: 0;
+}
+
+.exp-points li::marker {
+  color: var(--cyan);
+}
+
+.exp-status.neutral {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+/* ---- Project metric pills & engineering highlights ---- */
+
+.project-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 1rem;
+}
+
+.metric-pill {
+  background: rgba(124, 58, 237, 0.12);
+  border: 1px solid rgba(124, 58, 237, 0.35);
+  color: #c4b5fd;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+.project-highlights {
+  margin: 0 0 1.2rem;
+  padding-left: 1.15rem;
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.7;
+}
+
+.project-highlights li {
+  margin-bottom: 0.5rem;
+}
+
+.project-highlights li:last-child {
+  margin-bottom: 0;
+}
+
+.project-highlights li::marker {
+  color: var(--cyan);
+}
+
+.project-actions .project-link + .project-link {
+  margin-left: 1.25rem;
 }
